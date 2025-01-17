@@ -14,3 +14,9 @@ Sports      |       Difficulty
 Football    |       Medium
 Lacrosse    |       Hard
 Wrestling   |       Extreme
+
+
+1. Family
+1. Friends
+1. Money
+   
