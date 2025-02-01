@@ -20,7 +20,7 @@ Wrestling   |       Extreme
 1. Friends
 1. Money
    
-
+## Individual Project Block Diagram
 
 
 ![Block Diagram-314 drawio (1)](https://github.com/user-attachments/assets/a5548169-9a85-4c33-8a01-bf1efd5c2622)
