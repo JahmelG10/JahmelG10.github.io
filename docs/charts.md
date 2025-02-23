@@ -1,5 +1,5 @@
-
-# Individual Subsystem Block Diagram
+---
+title: Charts
 ---
 ## HMI Interface Block Diagram 
 
