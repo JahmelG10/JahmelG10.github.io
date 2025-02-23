@@ -534,33 +534,6 @@
 <h2 id="title-charts">title: Charts</h2>
 <h1 id="hmi-interface-block-diagram">HMI Interface Block Diagram</h1>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/ec5c0d30-a443-4bcc-9e63-ed41330f5141" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="314BlockDiagram" src="https://github.com/user-attachments/assets/ec5c0d30-a443-4bcc-9e63-ed41330f5141" /></a>---</p>
-<pre class="mermaid"><code>graph LR
-  A[Start] --&gt; B{Error?};
-  B --&gt;|Yes| C[Hmm...];
-  C --&gt; D[Debug];
-  D --&gt; B;
-  B ----&gt;|No| E[Yay!];</code></pre>
-<pre class="mermaid"><code>sequenceDiagram
-  autonumber
-  Alice-&gt;&gt;John: Hello John, how are you?
-  loop Healthcheck
-      John-&gt;&gt;John: Fight against hypochondria
-  end
-  Note right of John: Rational thoughts!
-  John--&gt;&gt;Alice: Great!
-  John-&gt;&gt;Bob: How about you?
-  Bob--&gt;&gt;John: Jolly good!</code></pre>
-<pre class="mermaid"><code>stateDiagram-v2
-  state fork_state &lt;&lt;fork&gt;&gt;
-    [*] --&gt; fork_state
-    fork_state --&gt; State2
-    fork_state --&gt; State3
-
-    state join_state &lt;&lt;join&gt;&gt;
-    State2 --&gt; join_state
-    State3 --&gt; join_state
-    join_state --&gt; State4
-    State4 --&gt; [*]</code></pre>
 
 
 
