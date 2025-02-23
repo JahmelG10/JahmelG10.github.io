@@ -1,5 +1,5 @@
 ---
-title: Second Page
+title: Board Design
 ---
 
-Things to discuss
+
