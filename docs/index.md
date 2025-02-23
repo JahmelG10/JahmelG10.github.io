@@ -1,9 +1,10 @@
 ---
-title: Welcome
+title: EGR 314 - Embedded Systems Design Project II
 tags:
 - tag1
 - tag2
 ---
+![electronic_components_hero_image](https://github.com/user-attachments/assets/51372dab-8e42-4841-90d2-2ab1d4b13c3e)
 
 ## Hi, my name is Jahmel 
 
