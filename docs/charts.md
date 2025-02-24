@@ -24,11 +24,11 @@ The **NCV2575** operates with an efficiency of **~77%** at **9V input and 3.3V o
 - **Power required at 3.3V side:** **104.35mW**
 - **Power drawn from 9V source:**  
   \[
-  \frac{104.35mW}{0.77} \approx 135.5mW
+  \{104.35mW}/{0.77} =approx 135.5mW
   \]
 - **Current drawn from 9V source:**  
   \[
-  \frac{135.5mW}{9V} \approx 15.1mA
+  \{135.5mW}/{9V} =approx 15.1mA
   \]
 - **Power dissipated as heat in regulator:**  
   \[
