@@ -429,6 +429,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#power-budget" class="md-nav__link">
+    Power Budget
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-power-consumption-table" class="md-nav__link">
+    Component Power Consumption Table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accounting-for-voltage-regulator-efficiency" class="md-nav__link">
+    Accounting for Voltage Regulator Efficiency
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-power-summary" class="md-nav__link">
+    Final Power Summary
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -530,6 +558,34 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#power-budget" class="md-nav__link">
+    Power Budget
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-power-consumption-table" class="md-nav__link">
+    Component Power Consumption Table
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accounting-for-voltage-regulator-efficiency" class="md-nav__link">
+    Accounting for Voltage Regulator Efficiency
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-power-summary" class="md-nav__link">
+    Final Power Summary
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -557,6 +613,96 @@
 
 <h2 id="hmi-interface-block-diagram">HMI Interface Block Diagram</h2>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/ec5c0d30-a443-4bcc-9e63-ed41330f5141" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="314BlockDiagram" src="https://github.com/user-attachments/assets/ec5c0d30-a443-4bcc-9e63-ed41330f5141" /></a>---</p>
+<h2 id="power-budget">Power Budget</h2>
+<h2 id="component-power-consumption-table">Component Power Consumption Table</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Voltage (V)</strong></th>
+<th><strong>Current (mA)</strong></th>
+<th><strong>Power (mW)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OLED Display</td>
+<td><strong>3.3V</strong></td>
+<td><strong>18mA</strong></td>
+<td><strong>59.4mW</strong></td>
+</tr>
+<tr>
+<td>PIC18F47Q10 MCU</td>
+<td><strong>3.3V</strong></td>
+<td><strong>10mA</strong></td>
+<td><strong>33mW</strong></td>
+</tr>
+<tr>
+<td>NCV2575 Quiescent</td>
+<td><strong>9V</strong></td>
+<td><strong>5mA</strong></td>
+<td><strong>45mW</strong></td>
+</tr>
+<tr>
+<td>Pull-up Resistors</td>
+<td><strong>3.3V</strong></td>
+<td><strong>3.62mA</strong></td>
+<td><strong>11.95mW</strong></td>
+</tr>
+<tr>
+<td><strong>Total Power Needed (3.3V Side)</strong></td>
+<td>-</td>
+<td><strong>31.62mA</strong></td>
+<td><strong>104.35mW</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="accounting-for-voltage-regulator-efficiency">Accounting for Voltage Regulator Efficiency</h2>
+<p>The <strong>NCV2575</strong> operates with an efficiency of <strong>~77%</strong> at <strong>9V input and 3.3V output</strong>.</p>
+<ul>
+<li><strong>Power required at 3.3V side:</strong> <strong>104.35mW</strong></li>
+<li><strong>Power drawn from 9V source:</strong><br />
+  [
+  \frac{104.35mW}{0.77} \approx 135.5mW
+  ]</li>
+<li><strong>Current drawn from 9V source:</strong><br />
+  [
+  \frac{135.5mW}{9V} \approx 15.1mA
+  ]</li>
+<li><strong>Power dissipated as heat in regulator:</strong><br />
+  [
+  135.5mW - 104.35mW = 31.15mW
+  ]</li>
+</ul>
+<h2 id="final-power-summary">Final Power Summary</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Power Rail</strong></th>
+<th><strong>Current Draw (mA)</strong></th>
+<th><strong>Power Dissipation (mW)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>3.3V Load</strong></td>
+<td><strong>31.62mA</strong></td>
+<td><strong>104.35mW</strong></td>
+</tr>
+<tr>
+<td><strong>9V Source</strong></td>
+<td><strong>15.1mA</strong></td>
+<td><strong>135.5mW</strong></td>
+</tr>
+<tr>
+<td><strong>Regulator Heat Loss</strong></td>
+<td>-</td>
+<td><strong>31.15mW</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>This power budget helps in selecting the appropriate <strong>power supply</strong> and ensuring <strong>thermal management</strong> in the circuit.</p>
 
 
 
