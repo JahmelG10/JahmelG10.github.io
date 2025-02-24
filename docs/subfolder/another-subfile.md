@@ -1,5 +1,5 @@
 ---
-title: This is a secondary sub page
+title: This is what should pop up
 ---
 
 Things to discuss
