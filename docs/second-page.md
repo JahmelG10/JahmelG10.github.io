@@ -7,7 +7,7 @@ title: Board Design
 
 
 ## **Download Links** 
-- [PDF](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/Individual_Subsytem_Schematic.pdffile:///C:/Users/Garduno/Desktop/Individual_Subsytem_Schematic.pdf)
+- [PDF](https://github.com/user-attachments/files/18934561/Individual_Subsytem_Schematic.1.pdf)
 - [Cadence ZIP Folder](https://github.com/JahmelG10/JahmelG10.github.io/raw/refs/heads/main/EGR314_INDIVIDUAL_SCHEMATIC_0.zip)
 
 ## **PCB Design** 
