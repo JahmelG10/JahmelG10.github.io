@@ -19,7 +19,7 @@ title: Charts
 
 ## Accounting for Voltage Regulator Efficiency
 
-The **NCV2575** operates with an efficiency of **~77%** at **9V input and 3.3V output**.
+The **LM2575WU** operates with an efficiency of **~77%** at **9V input and 3.3V output**.
 
 - **Power required at 3.3V side:** **104.35mW**
 - **Power drawn from 9V source:**  
