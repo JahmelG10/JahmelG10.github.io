@@ -8,7 +8,7 @@ title: Charts
 ## Power Budget
 
 
-## Component Power Consumption
+### Component Power Consumption
 
 | **Component**            | **Voltage (V)** | **Current (mA)** | **Power (mW)** |
 |-------------------------|-----------------|-----------------|-----------------|
@@ -21,7 +21,7 @@ title: Charts
 
 ---
 
-## Voltage Regulator Efficiency
+### Voltage Regulator Efficiency
 
 The **LM2575WU** operates with an efficiency of **~75%** at **12V input and 3.3V output**.
 
@@ -41,7 +41,7 @@ The **LM2575WU** operates with an efficiency of **~75%** at **12V input and 3.3V
 
 ---
 
-## Final Power Summary
+### Final Power Summary
 
 | **Power Rail** | **Current Draw (mA)** | **Power Dissipation (mW)** |
 |---------------|-----------------|-----------------|
