@@ -509,15 +509,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#component-power-consumption-table" class="md-nav__link">
-    Component Power Consumption Table
+  <a href="#component-power-consumption" class="md-nav__link">
+    Component Power Consumption
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#accounting-for-voltage-regulator-efficiency" class="md-nav__link">
-    Accounting for Voltage Regulator Efficiency
+  <a href="#voltage-regulator-efficiency" class="md-nav__link">
+    Voltage Regulator Efficiency
   </a>
   
 </li>
@@ -638,15 +638,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#component-power-consumption-table" class="md-nav__link">
-    Component Power Consumption Table
+  <a href="#component-power-consumption" class="md-nav__link">
+    Component Power Consumption
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#accounting-for-voltage-regulator-efficiency" class="md-nav__link">
-    Accounting for Voltage Regulator Efficiency
+  <a href="#voltage-regulator-efficiency" class="md-nav__link">
+    Voltage Regulator Efficiency
   </a>
   
 </li>
@@ -686,7 +686,7 @@
 <h2 id="hmi-interface-block-diagram">HMI Interface Block Diagram</h2>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/ec5c0d30-a443-4bcc-9e63-ed41330f5141" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="314BlockDiagram" src="https://github.com/user-attachments/assets/ec5c0d30-a443-4bcc-9e63-ed41330f5141" /></a>---</p>
 <h2 id="power-budget">Power Budget</h2>
-<h2 id="component-power-consumption-table">Component Power Consumption Table</h2>
+<h2 id="component-power-consumption">Component Power Consumption</h2>
 <table>
 <thead>
 <tr>
@@ -704,16 +704,22 @@
 <td><strong>59.4mW</strong></td>
 </tr>
 <tr>
-<td>PIC18F47Q10 MCU</td>
+<td>PIC18F27Q10 MCU</td>
 <td><strong>3.3V</strong></td>
 <td><strong>10mA</strong></td>
 <td><strong>33mW</strong></td>
 </tr>
 <tr>
-<td>LM2575WU</td>
-<td><strong>9V</strong></td>
+<td>LM2575WU Quiescent</td>
+<td><strong>12V</strong></td>
 <td><strong>5mA</strong></td>
-<td><strong>45mW</strong></td>
+<td><strong>60mW</strong></td>
+</tr>
+<tr>
+<td>Green LED</td>
+<td><strong>2V</strong></td>
+<td><strong>20mA</strong></td>
+<td><strong>40mW</strong></td>
 </tr>
 <tr>
 <td>Pull-up Resistors</td>
@@ -724,28 +730,30 @@
 <tr>
 <td><strong>Total Power Needed (3.3V Side)</strong></td>
 <td>-</td>
-<td><strong>31.62mA</strong></td>
-<td><strong>104.35mW</strong></td>
+<td><strong>51.62mA</strong></td>
+<td><strong>144.35mW</strong></td>
 </tr>
 </tbody>
 </table>
-<h2 id="accounting-for-voltage-regulator-efficiency">Accounting for Voltage Regulator Efficiency</h2>
-<p>The <strong>LM2575WU</strong> operates with an efficiency of <strong>~77%</strong> at <strong>9V input and 3.3V output</strong>.</p>
+<hr />
+<h2 id="voltage-regulator-efficiency">Voltage Regulator Efficiency</h2>
+<p>The <strong>LM2575WU</strong> operates with an efficiency of <strong>~75%</strong> at <strong>12V input and 3.3V output</strong>.</p>
 <ul>
-<li><strong>Power required at 3.3V side:</strong> <strong>104.35mW</strong></li>
-<li><strong>Power drawn from 9V source:</strong><br />
+<li><strong>Power required at 3.3V side:</strong> <strong>144.35mW</strong></li>
+<li><strong>Power drawn from 12V source:</strong><br />
   [
-  {104.35mW}/{0.77} =approx 135.5mW
+  {144.35mW}/{0.75} =approx 192.5mW
   ]</li>
-<li><strong>Current drawn from 9V source:</strong><br />
+<li><strong>Current drawn from 12V source:</strong><br />
   [
-  {135.5mW}/{9V} =approx 15.1mA
+  {192.5mW}/{12V} =approx 16.04mA
   ]</li>
 <li><strong>Power dissipated as heat in regulator:</strong><br />
   [
-  135.5mW - 104.35mW = 31.15mW
+  192.5mW - 144.35mW = 48.15mW
   ]</li>
 </ul>
+<hr />
 <h2 id="final-power-summary">Final Power Summary</h2>
 <table>
 <thead>
@@ -758,18 +766,18 @@
 <tbody>
 <tr>
 <td><strong>3.3V Load</strong></td>
-<td><strong>31.62mA</strong></td>
-<td><strong>104.35mW</strong></td>
+<td><strong>51.62mA</strong></td>
+<td><strong>144.35mW</strong></td>
 </tr>
 <tr>
-<td><strong>9V Source</strong></td>
-<td><strong>15.1mA</strong></td>
-<td><strong>135.5mW</strong></td>
+<td><strong>12V Source</strong></td>
+<td><strong>16.04mA</strong></td>
+<td><strong>192.5mW</strong></td>
 </tr>
 <tr>
 <td><strong>Regulator Heat Loss</strong></td>
 <td>-</td>
-<td><strong>31.15mW</strong></td>
+<td><strong>48.15mW</strong></td>
 </tr>
 </tbody>
 </table>
