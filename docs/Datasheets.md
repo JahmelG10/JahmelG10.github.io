@@ -1,10 +1,11 @@
 ## **Microcontroller** 
- ![PIC18f47q10ipt](https://github.com/user-attachments/assets/9aabd0ea-d2a0-4329-bd69-072b7eda9b46)
+![PIC27](https://github.com/user-attachments/assets/58886c6b-d25b-48cd-8007-c747711df29b)
 
-| PIC18F47Q10T-I/PT | Link | 
+
+| PIC18F27Q10-I/SO | Link | 
 |----------|----------|
-| Product Page URL  | [Digikey](https://www.digikey.com/en/products/detail/microchip-technology/PIC18F47Q10T-I-PT/10187788)  | 
-| PIC18F47Q10T-I/PT Data Sheet URL  | [Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/lm2575.pdf)   | 
+| Product Page URL  | [Digikey](https://www.digikey.com/en/products/detail/microchip-technology/PIC18F27Q10-I-SO/10064343)  | 
+| PIC18F27Q10-I/SO Data Sheet URL  | [Datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18F27-47Q10-Data-Sheet-40002043E.pdf)   | 
 
 ## **Voltage Regulator** 
 ![LM2575](https://github.com/user-attachments/assets/74112628-6978-4baa-b816-3d9daff7f73d)
