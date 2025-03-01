@@ -1,7 +1,7 @@
 ---
 title: PIC18F27Q10 Table
 ---
-
+## **PIC18F27Q10 Information Table**
 | PIC18F27Q10 Info| Answer | Comments |
 |----------|----------|----------|
 | Model   | PIC18F27Q10-I/SO   |    |
@@ -19,7 +19,7 @@ title: PIC18F27Q10 Table
 |Supports External Interrupts?  | Yes   | as found in datasheet   |
 |Required Programming Hardware, Cost, URL |  [Link](https://www.microchip.com/)  | as found in datasheet   |
 
-
+## **Associated Pins**
 
 | Peripheral        | Availability  | Associated Pins                          |
 |------------------|--------------|------------------------------------------|
@@ -31,6 +31,7 @@ title: PIC18F27Q10 Table
 | **PWM Outputs**   | 3 outputs    | Pins 6, 7, 13                            |
 | **Power (VDD/GND)** | 2 VDD, 2 GND | Pins 8 (GND), 19 (GND), 20 (VDD), 28 (VDD) |
 
+## **Datasheet References**
 
 ![28pindiagram](https://github.com/user-attachments/assets/e29e0a40-a9e7-43e8-8b9e-00141c12342f)
 
