@@ -8,49 +8,64 @@ title: Charts
 ## Power Budget
 
 
-### Component Power Consumption
 
-| **Component**            | **Voltage (V)** | **Current (mA)** | **Power (mW)** |
-|-------------------------|-----------------|-----------------|-----------------|
-| OLED Display           | **3.3V**        | **18mA**        | **59.4mW**      |
-| PIC18F27Q10 MCU        | **3.3V**        | **10mA**        | **33mW**        |
-| LM2575WU Quiescent      | **12V**         | **5mA**         | **60mW**        |
-| Green LED              | **2V**          | **20mA**        | **40mW**        |
-| Pull-up Resistors      | **3.3V**        | **3.62mA**      | **11.95mW**     |
-| **Total Power Needed (3.3V Side)** | - | **51.62mA** | **144.35mW** |
+
 
 ---
 
-### Voltage Regulator Efficiency
+### All Major Components (Absolute Maximum Current Draw)
 
-The **LM2575WU** operates with an efficiency of **~75%** at **12V input and 3.3V output**.
-
-- **Power required at 3.3V side:** **144.35mW**
-- **Power drawn from 12V source:**  
-  \[
-  {144.35mW}/{0.75} =approx 192.5mW
-  \]
-- **Current drawn from 12V source:**  
-  \[
-  {192.5mW}/{12V} =approx 16.04mA
-  \]
-- **Power dissipated as heat in regulator:**  
-  \[
-  192.5mW - 144.35mW = 48.15mW
-  \]
+| **Component Name**        | **Part Number**       | **Supply** | **#** | **Absolute (mA)** | **Total (mA)** | **Unit** |
+|-------------------------|----------------------|-----------|------|----------------|---------------|--------|
+| **PIC18F27Q10 MCU**     | PIC18F27Q10-I/SO    | **+3.3V**     | 1    | **50**           | **50**         | **mA**     |
+| **OLED Display**        | SSD1306               | **+3.3V**     | 1    | **25**           | **25**         | **mA**     |
+| **Green LED**           | Generic LED (Green)   | **+3.3V**     | 1    | **20**           | **20**         | **mA**     |
+| **Pull-up Resistors**   | 10kΩ & 4.7kΩ          | **+3.3V**     | 5    | **3.62**         | **3.62**       | **mA**     |
 
 ---
 
-### Final Power Summary
+### +3.3V Power Rail (Absolute Maximum Current Draw)
 
-| **Power Rail** | **Current Draw (mA)** | **Power Dissipation (mW)** |
-|---------------|-----------------|-----------------|
-| **3.3V Load** | **51.62mA**     | **144.35mW**    |
-| **12V Source** | **16.04mA**      | **192.5mW**     |
-| **Regulator Heat Loss** | - | **48.15mW** |
+| **Component Name**        | **Part Number**       | **Supply** | **#** | **Absolute (mA)** | **Total (mA)** | **Unit** |
+|-------------------------|----------------------|-----------|------|----------------|---------------|--------|
+| **PIC18F27Q10 MCU**     | PIC18F27Q10-I/SO    | **+3.3V**     | 1    | **50**           | **50**         | **mA**     |
+| **OLED Display**        | SSD1306               | **+3.3V**     | 1    | **25**           | **25**         | **mA**     |
+| **Green LED**           | Generic LED (Green)   | **+3.3V**     | 1    | **20**           | **20**         | **mA**     |
+| **Pull-up Resistors**   | 10kΩ & 4.7kΩ          | **+3.3V**     | 5    | **3.62**         | **3.62**       | **mA**     |
+
+- **Subtotal:** **98.62mA**  
+- **Safety Margin (25%)**: **+24.66mA**  
+- **Total Current Required on +3.3V Rail:** **123.28mA**  
 
 ---
 
+### c4. Regulator or Source Choice (Absolute Maximum Ratings)
 
-This power budget helps in selecting the appropriate **power supply** and ensuring **thermal management** in the circuit.
+| **Regulator Name**     | **Supply Input** | **Output Voltage** | **Max Output Current** |
+|----------------------|---------------|----------------|------------------|
+| **LM2575WU (Buck Converter)** | **+12V**          | **+3.3V**          | **1A (1000mA)** |
+
+- **Total Remaining Current Available on +3.3V Rail**: **876.72mA**  
+
+---
+
+### External Power Source 1 (Absolute Maximum Ratings)
+
+| **Power Source**      | **Part Number**    | **Input** | **Output** | **Absolute Current** | **Total Current (mA)** |
+|--------------------|-----------------|--------|--------|-----------------|----------------|
+| **Power Source Selection** | Plug-in Wall Supply | **110V AC**  | **+12V DC** | **6000mA**          | **6000mA**         |
+| **Power Rails Connected** | LM2575WU Regulator  | **+12V**     | **+3.3V**   | **1000mA**          | **1000mA**         |
+
+- **Total Remaining Current Available on External Power Source 1**: **5000mA**  
+
+---
+
+### Key Adjustments:
+- **PIC18F27Q10 Absolute Max Current:** Updated from **10mA** → **50mA**.
+- **OLED Display Absolute Max Current:** Updated from **18mA** → **25mA**.
+- **Total +3.3V Current Requirement Updated** to include **safety margin**.
+
+This power budget accounts for absolute maximum current draws to ensure a robust and reliable power supply design.
+
+
 
