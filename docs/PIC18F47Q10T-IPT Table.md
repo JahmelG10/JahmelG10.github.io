@@ -1,41 +1,124 @@
 ---
-title: PIC18F27Q10 Table
+title: API
 ---
-## **PIC18F27Q10 Information Table**
-| PIC18F27Q10 Info| Answer | Comments |
-|----------|----------|----------|
-| Model   | PIC18F27Q10-I/SO   |    |
-| Product Page URL   | [MircoChip](https://www.microchip.com/en-us/product/PIC18F27Q10)  |    |
-| PIC18F27Q10-I/SO Datasheet URL  | [Datasheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F27-47Q10-Micorcontroller-Data-Sheet-DS40002043.pdf)   | Found on Microchip.com   |
-| PIC18F27Q10-I/SO supplemental data sheet   | [Datasheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ApplicationNotes/ApplicationNotes/Getting-Started-with-UART-Using-EUSART-on-PIC18-90003282A.pdf)   | Has more details on using Uart   |
-|  PIC18F27Q10-I/SO supplemental data sheet  | [Datasheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ApplicationNotes/ApplicationNotes/Getting-Started-With-SPI-Using-MSSP-on-PIC18-90003265B.pdf)   | Has details on using SPI for debugging   |
-| PIC18F27Q10-I/SO supplemental data sheet  | [Datasheet](https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ApplicationNotes/ApplicationNotes/90003130A.pdf)   | Has details on chaning GPIO function   |
-| Vendor Link   | [Digikey](https://www.digikey.com/en/products/detail/microchip-technology/PIC18F27Q10-I-SO/10064343)   |   |
-| Code Examples   | [Link](https://mplabxpress.microchip.com/mplabcloud/example?device=q10)  | All Code Examples   |
-| Unit Cost   | $1.31   |    |
-| Absolute Maximum Current for entire IC  | 200mA   | as found in datasheet   |
-| Supply Voltage Range  | 1.8V / 3.3V / 5.5V   | Min/Nominal/ Max, as found in datasheet  |
-| Maximum GPIO current(per pin)  | 25mA   | as found in datasheet  |
-|Supports External Interrupts?  | Yes   | as found in datasheet   |
-|Required Programming Hardware, Cost, URL |  [Link](https://www.microchip.com/)  | as found in datasheet   |
+# HMI Subsystem API — Jahmel
 
-## **Associated Pins**
+This document defines the message structures used by the Human-Machine Interface (HMI) subsystem in our system architecture. It outlines both incoming and outgoing messages, conforming to the team-wide 64-byte protocol.
 
-| Peripheral        | Availability  | Associated Pins                          |
-|------------------|--------------|------------------------------------------|
-| **UART Modules**  | 2 modules    | Pins 17 (TX1), 18 (RX1), 27 (TX2), 28 (RX2) |
-| **SPI Modules**   | 2 modules    | Pins 14 (SCK1), 15 (SDI1), 16 (SDO1), 21 (SS2), 22 (SCK2), 23 (SDI2), 24 (SDO2), 26 (SS1) |
-| **I2C Modules**   | 2 modules    | Pins 14 (SCL1), 15 (SDA1), 22 (SCL2), 23 (SDA2) |
-| **GPIO Pins**     | 25 pins      | Pins 2-7, 9-13, 17-28                     |
-| **ADC Channels**  | 10 channels  | Pins 2-7, 13, 25, 26, 27                 |
-| **PWM Outputs**   | 3 outputs    | Pins 6, 7, 13                            |
-| **Power (VDD/GND)** | 2 VDD, 2 GND | Pins 8 (GND), 19 (GND), 20 (VDD), 28 (VDD) |
+Each message includes:
+- 2-byte prefix (`0x41`, `0x5a`)
+- 1-byte source ID
+- 1-byte destination ID
+- 1-byte message type
+- Message-specific data
+- Padding (`0x00`) up to byte 62
+- 2-byte suffix (`0x59`, `0x42`)
 
-## **Datasheet References**
+---
 
-![28pindiagram](https://github.com/user-attachments/assets/e29e0a40-a9e7-43e8-8b9e-00141c12342f)
+## Subsystem Address Table
 
-![28pintable](https://github.com/user-attachments/assets/ab2ad464-3020-47bc-9b73-5c998b1a7fe6)
+| Subsystem     | ID | Address |
+|---------------|----|---------|
+| WiFi (Cade)   | 1  | `0x01`  |
+| HMI (Jahmel)  | 2  | `0x02`  |
+| Temp Sensor   | 3  | `0x03`  |
+| Fan Controller| 4  | `0x04`  |
+| Broadcast     | 88 | `0x58`  |
 
-![28pintable2](https://github.com/user-attachments/assets/8ec3cdc5-3d69-4768-a943-f933c83dd7df)
+
+---
+## Messages Received by HMI
+
+---
+
+### Temperature Reading (Message Type: `0x10`)
+The HMI receives temperature data from the Temperature Sensor.
+
+| Byte      | Variable Name       | Variable Type | Min Value | Max Value | Example Value |
+|-----------|----------------------|----------------|------------|------------|----------------|
+| 1         | prefix_1             | `uint8_t`      | 0x41       | 0x41       | 0x41           |
+| 2         | prefix_2             | `uint8_t`      | 0x5a       | 0x5a       | 0x5a           |
+| 3         | source_id            | `uint8_t`      | 3          | 3          | 0x03           |
+| 4         | destination_id       | `uint8_t`      | 2          | 2          | 0x02           |
+| 5         | message_type         | `uint8_t`      | 0x10       | 0x10       | 0x10           |
+| 6         | temp_id              | `uint8_t`      | 1          | 255        | 0x01           |
+| 7         | status               | `uint8_t`      | 0          | 1          | 0x00           |
+| 8         | temp_data_integer    | `int8_t`       | -40        | 155        | 23             |
+| 9         | temp_data_fraction   | `uint8_t`      | 0          | 99         | 50             |
+| 10–62     | unused               | `uint8_t`      | 0x00       | 0x00       | 0x00           |
+| 63        | suffix_1             | `uint8_t`      | 0x59       | 0x59       | 0x59           |
+| 64        | suffix_2             | `uint8_t`      | 0x42       | 0x42       | 0x42           |
+
+---
+
+### Fan System Status (Message Type: `0x30`)
+The HMI receives status updates from the Fan Controller.
+
+| Byte      | Variable Name      | Variable Type | Min Value | Max Value | Example Value |
+|-----------|---------------------|----------------|------------|------------|----------------|
+| 1         | prefix_1            | `uint8_t`      | 0x41       | 0x41       | 0x41           |
+| 2         | prefix_2            | `uint8_t`      | 0x5a       | 0x5a       | 0x5a           |
+| 3         | source_id           | `uint8_t`      | 4          | 4          | 0x04           |
+| 4         | destination_id      | `uint8_t`      | 2          | 2          | 0x02           |
+| 5         | message_type        | `uint8_t`      | 0x30       | 0x30       | 0x30           |
+| 6         | fan_id              | `uint8_t`      | 1          | 255        | 0x02           |
+| 7         | status              | `uint8_t`      | 0          | 1          | 0x00           |
+| 8         | fan_status_code     | `uint8_t`      | 0x00       | 0x01       | 0x00           |
+| 9–62      | unused              | `uint8_t`      | 0x00       | 0x00       | 0x00           |
+| 63        | suffix_1            | `uint8_t`      | 0x59       | 0x59       | 0x59           |
+| 64        | suffix_2            | `uint8_t`      | 0x42       | 0x42       | 0x42           |
+
+---
+
+## Messages Sent by HMI
+
+---
+
+### Set Fan Speed (Message Type: `0x20`)
+The HMI sends a command to the Fan Controller to adjust motor speed.
+
+| Byte      | Variable Name      | Variable Type | Min Value | Max Value | Example Value |
+|-----------|---------------------|----------------|------------|------------|----------------|
+| 1         | prefix_1            | `uint8_t`      | 0x41       | 0x41       | 0x41           |
+| 2         | prefix_2            | `uint8_t`      | 0x5a       | 0x5a       | 0x5a           |
+| 3         | source_id           | `uint8_t`      | 2          | 2          | 0x02           |
+| 4         | destination_id      | `uint8_t`      | 4          | 4          | 0x04           |
+| 5         | message_type        | `uint8_t`      | 0x20       | 0x20       | 0x20           |
+| 6         | fan_id              | `uint8_t`      | 1          | 255        | 0x02           |
+| 7         | status              | `uint8_t`      | 0          | 1          | 0x01           |
+| 8         | fan_speed_set       | `uint8_t`      | 0          | 125        | 85             |
+| 9–62      | unused              | `uint8_t`      | 0x00       | 0x00       | 0x00           |
+| 63        | suffix_1            | `uint8_t`      | 0x59       | 0x59       | 0x59           |
+| 64        | suffix_2            | `uint8_t`      | 0x42       | 0x42       | 0x42           |
+
+---
+
+### Send Event Log to WiFi (Message Type: `0x31`)
+The HMI logs user/system actions to the WiFi Module for storage.
+
+| Byte      | Variable Name     | Variable Type | Min Value | Max Value | Example Value |
+|-----------|--------------------|----------------|------------|------------|----------------|
+| 1         | prefix_1           | `uint8_t`      | 0x41       | 0x41       | 0x41           |
+| 2         | prefix_2           | `uint8_t`      | 0x5a       | 0x5a       | 0x5a           |
+| 3         | source_id          | `uint8_t`      | 2          | 2          | 0x02           |
+| 4         | destination_id     | `uint8_t`      | 1          | 1          | 0x01           |
+| 5         | message_type       | `uint8_t`      | 0x31       | 0x31       | 0x31           |
+| 6         | event_type         | `uint8_t`      | 0          | 10         | 1 (fan change) |
+| 7         | event_value        | `uint8_t`      | 0          | 255        | 85             |
+| 8–62      | unused             | `uint8_t`      | 0x00       | 0x00       | 0x00           |
+| 63        | suffix_1           | `uint8_t`      | 0x59       | 0x59       | 0x59           |
+| 64        | suffix_2           | `uint8_t`      | 0x42       | 0x42       | 0x42           |
+
+---
+
+
+
+
+## Notes
+
+- All messages follow a 64-byte format with fixed prefix/suffix values.
+- Message types are unique to each action.
+- HMI must acknowledge valid messages and discard malformed or irrelevant ones.
+- Confirm use of message type `0x31` with Cade for WiFi storage.
 
