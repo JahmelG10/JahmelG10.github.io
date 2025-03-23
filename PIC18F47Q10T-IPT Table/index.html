@@ -29,7 +29,7 @@
 
     
       
-        <title>PIC18F27Q10 Table - EGR314 Report Template</title>
+        <title>API - EGR314 Report Template</title>
       
     
     
@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pic18f27q10-information-table" class="md-skip">
+        <a href="#hmi-subsystem-api-jahmel" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              PIC18F27Q10 Table
+              API
             
           </span>
         </div>
@@ -260,7 +260,7 @@
   
     
   
-  PIC18F27Q10 Table
+  API
 
       </a>
     </li>
@@ -440,12 +440,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    PIC18F27Q10 Table
+    API
   </span>
   
 
@@ -456,7 +458,7 @@
         
   
   <span class="md-ellipsis">
-    PIC18F27Q10 Table
+    API
   </span>
   
 
@@ -468,6 +470,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -476,22 +480,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pic18f27q10-information-table" class="md-nav__link">
-    PIC18F27Q10 Information Table
+  <a href="#subsystem-address-table" class="md-nav__link">
+    Subsystem Address Table
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#associated-pins" class="md-nav__link">
-    Associated Pins
+  <a href="#messages-received-by-hmi" class="md-nav__link">
+    Messages Received by HMI
   </a>
+  
+    <nav class="md-nav" aria-label="Messages Received by HMI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#temperature-reading-message-type-0x10" class="md-nav__link">
+    Temperature Reading (Message Type: 0x10)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fan-system-status-message-type-0x30" class="md-nav__link">
+    Fan System Status (Message Type: 0x30)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#datasheet-references" class="md-nav__link">
-    Datasheet References
+  <a href="#messages-sent-by-hmi" class="md-nav__link">
+    Messages Sent by HMI
+  </a>
+  
+    <nav class="md-nav" aria-label="Messages Sent by HMI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-fan-speed-message-type-0x20" class="md-nav__link">
+    Set Fan Speed (Message Type: 0x20)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-event-log-to-wifi-message-type-0x31" class="md-nav__link">
+    Send Event Log to WiFi (Message Type: 0x31)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
   </a>
   
 </li>
@@ -602,6 +653,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -610,22 +663,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pic18f27q10-information-table" class="md-nav__link">
-    PIC18F27Q10 Information Table
+  <a href="#subsystem-address-table" class="md-nav__link">
+    Subsystem Address Table
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#associated-pins" class="md-nav__link">
-    Associated Pins
+  <a href="#messages-received-by-hmi" class="md-nav__link">
+    Messages Received by HMI
   </a>
+  
+    <nav class="md-nav" aria-label="Messages Received by HMI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#temperature-reading-message-type-0x10" class="md-nav__link">
+    Temperature Reading (Message Type: 0x10)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fan-system-status-message-type-0x30" class="md-nav__link">
+    Fan System Status (Message Type: 0x30)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#datasheet-references" class="md-nav__link">
-    Datasheet References
+  <a href="#messages-sent-by-hmi" class="md-nav__link">
+    Messages Sent by HMI
+  </a>
+  
+    <nav class="md-nav" aria-label="Messages Sent by HMI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-fan-speed-message-type-0x20" class="md-nav__link">
+    Set Fan Speed (Message Type: 0x20)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#send-event-log-to-wifi-message-type-0x31" class="md-nav__link">
+    Send Event Log to WiFi (Message Type: 0x31)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
   </a>
   
 </li>
@@ -653,141 +753,486 @@
   
 
 
-  <h1>PIC18F27Q10 Table</h1>
-
-<h2 id="pic18f27q10-information-table"><strong>PIC18F27Q10 Information Table</strong></h2>
+<h1 id="hmi-subsystem-api-jahmel">HMI Subsystem API — Jahmel</h1>
+<p>This document defines the message structures used by the Human-Machine Interface (HMI) subsystem in our system architecture. It outlines both incoming and outgoing messages, conforming to the team-wide 64-byte protocol.</p>
+<p>Each message includes:
+- 2-byte prefix (<code>0x41</code>, <code>0x5a</code>)
+- 1-byte source ID
+- 1-byte destination ID
+- 1-byte message type
+- Message-specific data
+- Padding (<code>0x00</code>) up to byte 62
+- 2-byte suffix (<code>0x59</code>, <code>0x42</code>)</p>
+<hr />
+<h2 id="subsystem-address-table">Subsystem Address Table</h2>
 <table>
 <thead>
 <tr>
-<th>PIC18F27Q10 Info</th>
-<th>Answer</th>
-<th>Comments</th>
+<th>Subsystem</th>
+<th>ID</th>
+<th>Address</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Model</td>
-<td>PIC18F27Q10-I/SO</td>
-<td></td>
+<td>WiFi (Cade)</td>
+<td>1</td>
+<td><code>0x01</code></td>
 </tr>
 <tr>
-<td>Product Page URL</td>
-<td><a href="https://www.microchip.com/en-us/product/PIC18F27Q10">MircoChip</a></td>
-<td></td>
+<td>HMI (Jahmel)</td>
+<td>2</td>
+<td><code>0x02</code></td>
 </tr>
 <tr>
-<td>PIC18F27Q10-I/SO Datasheet URL</td>
-<td><a href="https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F27-47Q10-Micorcontroller-Data-Sheet-DS40002043.pdf">Datasheet</a></td>
-<td>Found on Microchip.com</td>
+<td>Temp Sensor</td>
+<td>3</td>
+<td><code>0x03</code></td>
 </tr>
 <tr>
-<td>PIC18F27Q10-I/SO supplemental data sheet</td>
-<td><a href="https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ApplicationNotes/ApplicationNotes/Getting-Started-with-UART-Using-EUSART-on-PIC18-90003282A.pdf">Datasheet</a></td>
-<td>Has more details on using Uart</td>
+<td>Fan Controller</td>
+<td>4</td>
+<td><code>0x04</code></td>
 </tr>
 <tr>
-<td>PIC18F27Q10-I/SO supplemental data sheet</td>
-<td><a href="https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ApplicationNotes/ApplicationNotes/Getting-Started-With-SPI-Using-MSSP-on-PIC18-90003265B.pdf">Datasheet</a></td>
-<td>Has details on using SPI for debugging</td>
-</tr>
-<tr>
-<td>PIC18F27Q10-I/SO supplemental data sheet</td>
-<td><a href="https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ApplicationNotes/ApplicationNotes/90003130A.pdf">Datasheet</a></td>
-<td>Has details on chaning GPIO function</td>
-</tr>
-<tr>
-<td>Vendor Link</td>
-<td><a href="https://www.digikey.com/en/products/detail/microchip-technology/PIC18F27Q10-I-SO/10064343">Digikey</a></td>
-<td></td>
-</tr>
-<tr>
-<td>Code Examples</td>
-<td><a href="https://mplabxpress.microchip.com/mplabcloud/example?device=q10">Link</a></td>
-<td>All Code Examples</td>
-</tr>
-<tr>
-<td>Unit Cost</td>
-<td>$1.31</td>
-<td></td>
-</tr>
-<tr>
-<td>Absolute Maximum Current for entire IC</td>
-<td>200mA</td>
-<td>as found in datasheet</td>
-</tr>
-<tr>
-<td>Supply Voltage Range</td>
-<td>1.8V / 3.3V / 5.5V</td>
-<td>Min/Nominal/ Max, as found in datasheet</td>
-</tr>
-<tr>
-<td>Maximum GPIO current(per pin)</td>
-<td>25mA</td>
-<td>as found in datasheet</td>
-</tr>
-<tr>
-<td>Supports External Interrupts?</td>
-<td>Yes</td>
-<td>as found in datasheet</td>
-</tr>
-<tr>
-<td>Required Programming Hardware, Cost, URL</td>
-<td><a href="https://www.microchip.com/">Link</a></td>
-<td>as found in datasheet</td>
+<td>Broadcast</td>
+<td>88</td>
+<td><code>0x58</code></td>
 </tr>
 </tbody>
 </table>
-<h2 id="associated-pins"><strong>Associated Pins</strong></h2>
+<hr />
+<h2 id="messages-received-by-hmi">Messages Received by HMI</h2>
+<hr />
+<h3 id="temperature-reading-message-type-0x10">Temperature Reading (Message Type: <code>0x10</code>)</h3>
+<p>The HMI receives temperature data from the Temperature Sensor.</p>
 <table>
 <thead>
 <tr>
-<th>Peripheral</th>
-<th>Availability</th>
-<th>Associated Pins</th>
+<th>Byte</th>
+<th>Variable Name</th>
+<th>Variable Type</th>
+<th>Min Value</th>
+<th>Max Value</th>
+<th>Example Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>UART Modules</strong></td>
-<td>2 modules</td>
-<td>Pins 17 (TX1), 18 (RX1), 27 (TX2), 28 (RX2)</td>
+<td>1</td>
+<td>prefix_1</td>
+<td><code>uint8_t</code></td>
+<td>0x41</td>
+<td>0x41</td>
+<td>0x41</td>
 </tr>
 <tr>
-<td><strong>SPI Modules</strong></td>
-<td>2 modules</td>
-<td>Pins 14 (SCK1), 15 (SDI1), 16 (SDO1), 21 (SS2), 22 (SCK2), 23 (SDI2), 24 (SDO2), 26 (SS1)</td>
+<td>2</td>
+<td>prefix_2</td>
+<td><code>uint8_t</code></td>
+<td>0x5a</td>
+<td>0x5a</td>
+<td>0x5a</td>
 </tr>
 <tr>
-<td><strong>I2C Modules</strong></td>
-<td>2 modules</td>
-<td>Pins 14 (SCL1), 15 (SDA1), 22 (SCL2), 23 (SDA2)</td>
+<td>3</td>
+<td>source_id</td>
+<td><code>uint8_t</code></td>
+<td>3</td>
+<td>3</td>
+<td>0x03</td>
 </tr>
 <tr>
-<td><strong>GPIO Pins</strong></td>
-<td>25 pins</td>
-<td>Pins 2-7, 9-13, 17-28</td>
+<td>4</td>
+<td>destination_id</td>
+<td><code>uint8_t</code></td>
+<td>2</td>
+<td>2</td>
+<td>0x02</td>
 </tr>
 <tr>
-<td><strong>ADC Channels</strong></td>
-<td>10 channels</td>
-<td>Pins 2-7, 13, 25, 26, 27</td>
+<td>5</td>
+<td>message_type</td>
+<td><code>uint8_t</code></td>
+<td>0x10</td>
+<td>0x10</td>
+<td>0x10</td>
 </tr>
 <tr>
-<td><strong>PWM Outputs</strong></td>
-<td>3 outputs</td>
-<td>Pins 6, 7, 13</td>
+<td>6</td>
+<td>temp_id</td>
+<td><code>uint8_t</code></td>
+<td>1</td>
+<td>255</td>
+<td>0x01</td>
 </tr>
 <tr>
-<td><strong>Power (VDD/GND)</strong></td>
-<td>2 VDD, 2 GND</td>
-<td>Pins 8 (GND), 19 (GND), 20 (VDD), 28 (VDD)</td>
+<td>7</td>
+<td>status</td>
+<td><code>uint8_t</code></td>
+<td>0</td>
+<td>1</td>
+<td>0x00</td>
+</tr>
+<tr>
+<td>8</td>
+<td>temp_data_integer</td>
+<td><code>int8_t</code></td>
+<td>-40</td>
+<td>155</td>
+<td>23</td>
+</tr>
+<tr>
+<td>9</td>
+<td>temp_data_fraction</td>
+<td><code>uint8_t</code></td>
+<td>0</td>
+<td>99</td>
+<td>50</td>
+</tr>
+<tr>
+<td>10–62</td>
+<td>unused</td>
+<td><code>uint8_t</code></td>
+<td>0x00</td>
+<td>0x00</td>
+<td>0x00</td>
+</tr>
+<tr>
+<td>63</td>
+<td>suffix_1</td>
+<td><code>uint8_t</code></td>
+<td>0x59</td>
+<td>0x59</td>
+<td>0x59</td>
+</tr>
+<tr>
+<td>64</td>
+<td>suffix_2</td>
+<td><code>uint8_t</code></td>
+<td>0x42</td>
+<td>0x42</td>
+<td>0x42</td>
 </tr>
 </tbody>
 </table>
-<h2 id="datasheet-references"><strong>Datasheet References</strong></h2>
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/e29e0a40-a9e7-43e8-8b9e-00141c12342f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="28pindiagram" src="https://github.com/user-attachments/assets/e29e0a40-a9e7-43e8-8b9e-00141c12342f" /></a></p>
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/ab2ad464-3020-47bc-9b73-5c998b1a7fe6" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="28pintable" src="https://github.com/user-attachments/assets/ab2ad464-3020-47bc-9b73-5c998b1a7fe6" /></a></p>
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/8ec3cdc5-3d69-4768-a943-f933c83dd7df" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="28pintable2" src="https://github.com/user-attachments/assets/8ec3cdc5-3d69-4768-a943-f933c83dd7df" /></a></p>
+<hr />
+<h3 id="fan-system-status-message-type-0x30">Fan System Status (Message Type: <code>0x30</code>)</h3>
+<p>The HMI receives status updates from the Fan Controller.</p>
+<table>
+<thead>
+<tr>
+<th>Byte</th>
+<th>Variable Name</th>
+<th>Variable Type</th>
+<th>Min Value</th>
+<th>Max Value</th>
+<th>Example Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>prefix_1</td>
+<td><code>uint8_t</code></td>
+<td>0x41</td>
+<td>0x41</td>
+<td>0x41</td>
+</tr>
+<tr>
+<td>2</td>
+<td>prefix_2</td>
+<td><code>uint8_t</code></td>
+<td>0x5a</td>
+<td>0x5a</td>
+<td>0x5a</td>
+</tr>
+<tr>
+<td>3</td>
+<td>source_id</td>
+<td><code>uint8_t</code></td>
+<td>4</td>
+<td>4</td>
+<td>0x04</td>
+</tr>
+<tr>
+<td>4</td>
+<td>destination_id</td>
+<td><code>uint8_t</code></td>
+<td>2</td>
+<td>2</td>
+<td>0x02</td>
+</tr>
+<tr>
+<td>5</td>
+<td>message_type</td>
+<td><code>uint8_t</code></td>
+<td>0x30</td>
+<td>0x30</td>
+<td>0x30</td>
+</tr>
+<tr>
+<td>6</td>
+<td>fan_id</td>
+<td><code>uint8_t</code></td>
+<td>1</td>
+<td>255</td>
+<td>0x02</td>
+</tr>
+<tr>
+<td>7</td>
+<td>status</td>
+<td><code>uint8_t</code></td>
+<td>0</td>
+<td>1</td>
+<td>0x00</td>
+</tr>
+<tr>
+<td>8</td>
+<td>fan_status_code</td>
+<td><code>uint8_t</code></td>
+<td>0x00</td>
+<td>0x01</td>
+<td>0x00</td>
+</tr>
+<tr>
+<td>9–62</td>
+<td>unused</td>
+<td><code>uint8_t</code></td>
+<td>0x00</td>
+<td>0x00</td>
+<td>0x00</td>
+</tr>
+<tr>
+<td>63</td>
+<td>suffix_1</td>
+<td><code>uint8_t</code></td>
+<td>0x59</td>
+<td>0x59</td>
+<td>0x59</td>
+</tr>
+<tr>
+<td>64</td>
+<td>suffix_2</td>
+<td><code>uint8_t</code></td>
+<td>0x42</td>
+<td>0x42</td>
+<td>0x42</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="messages-sent-by-hmi">Messages Sent by HMI</h2>
+<hr />
+<h3 id="set-fan-speed-message-type-0x20">Set Fan Speed (Message Type: <code>0x20</code>)</h3>
+<p>The HMI sends a command to the Fan Controller to adjust motor speed.</p>
+<table>
+<thead>
+<tr>
+<th>Byte</th>
+<th>Variable Name</th>
+<th>Variable Type</th>
+<th>Min Value</th>
+<th>Max Value</th>
+<th>Example Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>prefix_1</td>
+<td><code>uint8_t</code></td>
+<td>0x41</td>
+<td>0x41</td>
+<td>0x41</td>
+</tr>
+<tr>
+<td>2</td>
+<td>prefix_2</td>
+<td><code>uint8_t</code></td>
+<td>0x5a</td>
+<td>0x5a</td>
+<td>0x5a</td>
+</tr>
+<tr>
+<td>3</td>
+<td>source_id</td>
+<td><code>uint8_t</code></td>
+<td>2</td>
+<td>2</td>
+<td>0x02</td>
+</tr>
+<tr>
+<td>4</td>
+<td>destination_id</td>
+<td><code>uint8_t</code></td>
+<td>4</td>
+<td>4</td>
+<td>0x04</td>
+</tr>
+<tr>
+<td>5</td>
+<td>message_type</td>
+<td><code>uint8_t</code></td>
+<td>0x20</td>
+<td>0x20</td>
+<td>0x20</td>
+</tr>
+<tr>
+<td>6</td>
+<td>fan_id</td>
+<td><code>uint8_t</code></td>
+<td>1</td>
+<td>255</td>
+<td>0x02</td>
+</tr>
+<tr>
+<td>7</td>
+<td>status</td>
+<td><code>uint8_t</code></td>
+<td>0</td>
+<td>1</td>
+<td>0x01</td>
+</tr>
+<tr>
+<td>8</td>
+<td>fan_speed_set</td>
+<td><code>uint8_t</code></td>
+<td>0</td>
+<td>125</td>
+<td>85</td>
+</tr>
+<tr>
+<td>9–62</td>
+<td>unused</td>
+<td><code>uint8_t</code></td>
+<td>0x00</td>
+<td>0x00</td>
+<td>0x00</td>
+</tr>
+<tr>
+<td>63</td>
+<td>suffix_1</td>
+<td><code>uint8_t</code></td>
+<td>0x59</td>
+<td>0x59</td>
+<td>0x59</td>
+</tr>
+<tr>
+<td>64</td>
+<td>suffix_2</td>
+<td><code>uint8_t</code></td>
+<td>0x42</td>
+<td>0x42</td>
+<td>0x42</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="send-event-log-to-wifi-message-type-0x31">Send Event Log to WiFi (Message Type: <code>0x31</code>)</h3>
+<p>The HMI logs user/system actions to the WiFi Module for storage.</p>
+<table>
+<thead>
+<tr>
+<th>Byte</th>
+<th>Variable Name</th>
+<th>Variable Type</th>
+<th>Min Value</th>
+<th>Max Value</th>
+<th>Example Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>prefix_1</td>
+<td><code>uint8_t</code></td>
+<td>0x41</td>
+<td>0x41</td>
+<td>0x41</td>
+</tr>
+<tr>
+<td>2</td>
+<td>prefix_2</td>
+<td><code>uint8_t</code></td>
+<td>0x5a</td>
+<td>0x5a</td>
+<td>0x5a</td>
+</tr>
+<tr>
+<td>3</td>
+<td>source_id</td>
+<td><code>uint8_t</code></td>
+<td>2</td>
+<td>2</td>
+<td>0x02</td>
+</tr>
+<tr>
+<td>4</td>
+<td>destination_id</td>
+<td><code>uint8_t</code></td>
+<td>1</td>
+<td>1</td>
+<td>0x01</td>
+</tr>
+<tr>
+<td>5</td>
+<td>message_type</td>
+<td><code>uint8_t</code></td>
+<td>0x31</td>
+<td>0x31</td>
+<td>0x31</td>
+</tr>
+<tr>
+<td>6</td>
+<td>event_type</td>
+<td><code>uint8_t</code></td>
+<td>0</td>
+<td>10</td>
+<td>1 (fan change)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>event_value</td>
+<td><code>uint8_t</code></td>
+<td>0</td>
+<td>255</td>
+<td>85</td>
+</tr>
+<tr>
+<td>8–62</td>
+<td>unused</td>
+<td><code>uint8_t</code></td>
+<td>0x00</td>
+<td>0x00</td>
+<td>0x00</td>
+</tr>
+<tr>
+<td>63</td>
+<td>suffix_1</td>
+<td><code>uint8_t</code></td>
+<td>0x59</td>
+<td>0x59</td>
+<td>0x59</td>
+</tr>
+<tr>
+<td>64</td>
+<td>suffix_2</td>
+<td><code>uint8_t</code></td>
+<td>0x42</td>
+<td>0x42</td>
+<td>0x42</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="notes">Notes</h2>
+<ul>
+<li>All messages follow a 64-byte format with fixed prefix/suffix values.</li>
+<li>Message types are unique to each action.</li>
+<li>HMI must acknowledge valid messages and discard malformed or irrelevant ones.</li>
+<li>Confirm use of message type <code>0x31</code> with Cade for WiFi storage.</li>
+</ul>
 
 
 
