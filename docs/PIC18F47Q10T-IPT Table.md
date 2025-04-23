@@ -123,7 +123,7 @@ The HMI logs user/system actions to the WiFi Module for storage.
 - Confirm use of message type `0x31` with Cade for WiFi storage.
 
 [wednesday_1.txt](https://github.com/user-attachments/files/19861195/wednesday_1.txt)#include "mcc_generated_files/system/system.h"
-
+ <pre><code>
 #define MSG_PREFIX_1     0x41
 #define MSG_PREFIX_2     0x5A
 #define MSG_SUFFIX_1     0x59
@@ -293,5 +293,5 @@ void main(void)
         CheckButtonAndBroadcast();
     }
 }
-
+ </code></pre> 
 
