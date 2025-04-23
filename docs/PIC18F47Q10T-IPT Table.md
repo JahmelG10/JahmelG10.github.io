@@ -123,21 +123,21 @@ The HMI logs user/system actions to the WiFi Module for storage.
 - Confirm use of message type `0x31` with Cade for WiFi storage.
 
 [wednesday_1.txt](https://github.com/user-attachments/files/19861195/wednesday_1.txt)#include "mcc_generated_files/system/system.h"
- <pre><code>
-#define MSG_PREFIX_1     0x41
-#define MSG_PREFIX_2     0x5A
-#define MSG_SUFFIX_1     0x59
-#define MSG_SUFFIX_2     0x42
-#define MSG_TOTAL_LEN    64
+<pre><code>
+"#define MSG_PREFIX_1     0x41" 
+"#define MSG_PREFIX_2     0x5A"
+"#define MSG_SUFFIX_1     0x59"
+"#define MSG_SUFFIX_2     0x42"
+"#define MSG_TOTAL_LEN    64"
 
-#define ID_WIFI           0x01
-#define ID_HMI            0x02
-#define ID_FAN_CONTROL    0x03
-#define ID_TEMP_SENSOR    0x03
-#define ID_BROADCAST      0x58
+"#define ID_WIFI           0x01"
+"#define ID_HMI            0x02"
+"#define ID_FAN_CONTROL    0x03"
+"#define ID_TEMP_SENSOR    0x03"
+"#define ID_BROADCAST      0x58"
 
-#define MSG_TYPE_FAN_CTRL  0x20
-#define MSG_TYPE_TEMP_DATA 0x10
+"#define MSG_TYPE_FAN_CTRL  0x20"
+"#define MSG_TYPE_TEMP_DATA 0x10"
 
 static uint8_t msg_buffer[MSG_TOTAL_LEN];
 static uint8_t msg_index = 0;
