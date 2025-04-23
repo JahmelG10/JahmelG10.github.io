@@ -1233,165 +1233,180 @@
 <li>HMI must acknowledge valid messages and discard malformed or irrelevant ones.</li>
 <li>Confirm use of message type <code>0x31</code> with Cade for WiFi storage.</li>
 </ul>
-<p><a href="https://github.com/user-attachments/files/19861195/wednesday_1.txt">wednesday_1.txt</a>#include "mcc_generated_files/system/system.h"</p>
-<h1 id="define-msg_prefix_1-0x41">define MSG_PREFIX_1     0x41</h1>
-<h1 id="define-msg_prefix_2-0x5a">define MSG_PREFIX_2     0x5A</h1>
-<h1 id="define-msg_suffix_1-0x59">define MSG_SUFFIX_1     0x59</h1>
-<h1 id="define-msg_suffix_2-0x42">define MSG_SUFFIX_2     0x42</h1>
-<h1 id="define-msg_total_len-64">define MSG_TOTAL_LEN    64</h1>
-<h1 id="define-id_wifi-0x01">define ID_WIFI           0x01</h1>
-<h1 id="define-id_hmi-0x02">define ID_HMI            0x02</h1>
-<h1 id="define-id_fan_control-0x03">define ID_FAN_CONTROL    0x03</h1>
-<h1 id="define-id_temp_sensor-0x03">define ID_TEMP_SENSOR    0x03</h1>
-<h1 id="define-id_broadcast-0x58">define ID_BROADCAST      0x58</h1>
-<h1 id="define-msg_type_fan_ctrl-0x20">define MSG_TYPE_FAN_CTRL  0x20</h1>
-<h1 id="define-msg_type_temp_data-0x10">define MSG_TYPE_TEMP_DATA 0x10</h1>
-<p>static uint8_t msg_buffer[MSG_TOTAL_LEN];
+<p><a href="https://github.com/user-attachments/files/19861195/wednesday_1.txt">wednesday_1.txt</a>#include "mcc_generated_files/system/system.h"
+ 
+<pre><code>
+#define MSG_PREFIX_1     0x41
+#define MSG_PREFIX_2     0x5A
+#define MSG_SUFFIX_1     0x59
+#define MSG_SUFFIX_2     0x42
+#define MSG_TOTAL_LEN    64
+
+#define ID_WIFI           0x01
+#define ID_HMI            0x02
+#define ID_FAN_CONTROL    0x03
+#define ID_TEMP_SENSOR    0x03
+#define ID_BROADCAST      0x58
+
+#define MSG_TYPE_FAN_CTRL  0x20
+#define MSG_TYPE_TEMP_DATA 0x10
+
+static uint8_t msg_buffer[MSG_TOTAL_LEN];
 static uint8_t msg_index = 0;
-static bool msg_receiving = false;</p>
-<p>volatile uint8_t fan_speed = 0;</p>
-<p>void BlinkLED(uint8_t times)
+static bool msg_receiving = false;
+
+volatile uint8_t fan_speed = 0;
+
+void BlinkLED(uint8_t times)
 {
-    for (uint8_t i = 0; i &lt; times; i++)
+    for (uint8_t i = 0; i < times; i++)
     {
         IO_RC5_SetHigh();
         __delay_ms(100);
         IO_RC5_SetLow();
         __delay_ms(100);
     }
-}</p>
-<p>void SendFanSpeedBroadcast(uint8_t speed)
-{
-    uint8_t msg[64] = {0};</p>
-<pre><code>msg[0] = MSG_PREFIX_1;
-msg[1] = MSG_PREFIX_2;
-msg[2] = ID_HMI;
-msg[3] = ID_BROADCAST;
-msg[4] = MSG_TYPE_FAN_CTRL;
-msg[5] = 0x02;  // fan_id
-msg[6] = 0x01;  // status
-msg[7] = speed; // fan_speed_data
-msg[8] = speed; // fan_speed_set
-msg[62] = MSG_SUFFIX_1;
-msg[63] = MSG_SUFFIX_2;
-
-for (uint8_t i = 0; i &lt; 64; i++)
-{
-    while (!EUSART1_IsTxReady());
-    EUSART1_Write(msg[i]);
 }
-</code></pre>
-<p>}</p>
-<p>void CheckButtonAndBroadcast(void)
+
+void SendFanSpeedBroadcast(uint8_t speed)
+{
+    uint8_t msg[64] = {0};
+
+    msg[0] = MSG_PREFIX_1;
+    msg[1] = MSG_PREFIX_2;
+    msg[2] = ID_HMI;
+    msg[3] = ID_BROADCAST;
+    msg[4] = MSG_TYPE_FAN_CTRL;
+    msg[5] = 0x02;  // fan_id
+    msg[6] = 0x01;  // status
+    msg[7] = speed; // fan_speed_data
+    msg[8] = speed; // fan_speed_set
+    msg[62] = MSG_SUFFIX_1;
+    msg[63] = MSG_SUFFIX_2;
+
+    for (uint8_t i = 0; i < 64; i++)
+    {
+        while (!EUSART1_IsTxReady());
+        EUSART1_Write(msg[i]);
+    }
+}
+
+void CheckButtonAndBroadcast(void)
 {
     static bool prev_state = true;
-    bool current_state = IO_RC2_GetValue();</p>
-<pre><code>if (prev_state == true &amp;&amp; current_state == false)
-{
-    fan_speed++;
-    if (fan_speed &gt; 3) fan_speed = 1;
-    SendFanSpeedBroadcast(fan_speed);
+    bool current_state = IO_RC2_GetValue();
+
+    if (prev_state == true && current_state == false)
+    {
+        fan_speed++;
+        if (fan_speed > 3) fan_speed = 1;
+        SendFanSpeedBroadcast(fan_speed);
+    }
+
+    prev_state = current_state;
 }
 
-prev_state = current_state;
-</code></pre>
-<p>}</p>
-<p>void ForwardMessage(uint8_t* buffer)
+void ForwardMessage(uint8_t* buffer)
 {
-    for (uint8_t i = 0; i &lt; MSG_TOTAL_LEN; i++)
+    for (uint8_t i = 0; i < MSG_TOTAL_LEN; i++)
     {
         while (!EUSART1_IsTxReady());
         EUSART1_Write(buffer[i]);
     }
-}</p>
-<p>void HandleFullMessage(uint8_t* buffer)
+}
+
+void HandleFullMessage(uint8_t* buffer)
 {
     if (buffer[0] != MSG_PREFIX_1 || buffer[1] != MSG_PREFIX_2 ||
         buffer[62] != MSG_SUFFIX_1 || buffer[63] != MSG_SUFFIX_2)
-        return;</p>
-<pre><code>uint8_t src_id = buffer[2];
-uint8_t dest_id = buffer[3];
-uint8_t msg_type = buffer[4];
+        return;
 
-if (src_id != ID_WIFI &amp;&amp; src_id != ID_HMI &amp;&amp;
-    src_id != ID_FAN_CONTROL &amp;&amp; src_id != ID_BROADCAST &amp;&amp;
-    src_id != ID_TEMP_SENSOR)
-    return;
+    uint8_t src_id = buffer[2];
+    uint8_t dest_id = buffer[3];
+    uint8_t msg_type = buffer[4];
 
-// Forward messages not meant for HMI or broadcast
-if (dest_id != ID_HMI &amp;&amp; dest_id != ID_BROADCAST)
-{
-    ForwardMessage(buffer);
-    return;
-}
+    if (src_id != ID_WIFI && src_id != ID_HMI &&
+        src_id != ID_FAN_CONTROL && src_id != ID_BROADCAST &&
+        src_id != ID_TEMP_SENSOR)
+        return;
 
-switch (src_id)
-{
-    case ID_WIFI:        BlinkLED(1); break;
-    case ID_HMI:         BlinkLED(2); break;
-    case ID_FAN_CONTROL: BlinkLED(3); break;
-    case ID_BROADCAST:   BlinkLED(4); break;
-}
-
-if (msg_type == MSG_TYPE_TEMP_DATA &amp;&amp; src_id == ID_TEMP_SENSOR)
-{
-    uint8_t status = buffer[6];
-    uint8_t raw_temp = buffer[7];
-    uint8_t temp_frac = buffer[8];
-
-    if (status == 1)
+    // Forward messages not meant for HMI or broadcast
+    if (dest_id != ID_HMI && dest_id != ID_BROADCAST)
     {
-        int8_t corrected_temp = (int8_t)raw_temp - 40;
-        float temperature = corrected_temp + (temp_frac / 100.0f);
+        ForwardMessage(buffer);
+        return;
+    }
 
-        if (corrected_temp &lt; 0)
-            BlinkLED(2);
-        else
-            BlinkLED(1);
+    switch (src_id)
+    {
+        case ID_WIFI:        BlinkLED(1); break;
+        case ID_HMI:         BlinkLED(2); break;
+        case ID_FAN_CONTROL: BlinkLED(3); break;
+        case ID_BROADCAST:   BlinkLED(4); break;
+    }
+
+    if (msg_type == MSG_TYPE_TEMP_DATA && src_id == ID_TEMP_SENSOR)
+    {
+        uint8_t status = buffer[6];
+        uint8_t raw_temp = buffer[7];
+        uint8_t temp_frac = buffer[8];
+
+        if (status == 1)
+        {
+            int8_t corrected_temp = (int8_t)raw_temp - 40;
+            float temperature = corrected_temp + (temp_frac / 100.0f);
+
+            if (corrected_temp < 0)
+                BlinkLED(2);
+            else
+                BlinkLED(1);
+        }
     }
 }
-</code></pre>
-<p>}</p>
-<p>void UART_MessageParser(void)
+
+void UART_MessageParser(void)
 {
     if (EUSART1_IsRxReady())
     {
-        uint8_t byte = EUSART1_Read();</p>
-<pre><code>    if (!msg_receiving)
-    {
-        if (byte == MSG_PREFIX_1)
-        {
-            msg_buffer[0] = byte;
-            msg_index = 1;
-            msg_receiving = true;
-        }
-    }
-    else
-    {
-        msg_buffer[msg_index++] = byte;
+        uint8_t byte = EUSART1_Read();
 
-        if (msg_index == MSG_TOTAL_LEN)
+        if (!msg_receiving)
         {
-            HandleFullMessage(msg_buffer);
-            msg_receiving = false;
-            msg_index = 0;
+            if (byte == MSG_PREFIX_1)
+            {
+                msg_buffer[0] = byte;
+                msg_index = 1;
+                msg_receiving = true;
+            }
+        }
+        else
+        {
+            msg_buffer[msg_index++] = byte;
+
+            if (msg_index == MSG_TOTAL_LEN)
+            {
+                HandleFullMessage(msg_buffer);
+                msg_receiving = false;
+                msg_index = 0;
+            }
         }
     }
 }
-</code></pre>
-<p>}</p>
-<p>void main(void)
+
+void main(void)
 {
     SYSTEM_Initialize();
     INTERRUPT_GlobalInterruptEnable();
-    INTERRUPT_PeripheralInterruptEnable();</p>
-<pre><code>while (1)
-{
-    UART_MessageParser();
-    CheckButtonAndBroadcast();
+    INTERRUPT_PeripheralInterruptEnable();
+
+    while (1)
+    {
+        UART_MessageParser();
+        CheckButtonAndBroadcast();
+    }
 }
-</code></pre>
-<p>}</p>
+ </code></pre>
+</p>
 
 
 
