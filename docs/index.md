@@ -1,5 +1,5 @@
 ---
-title: EGR 314 - Embedded Systems Design Project II
+title: Home
 tags:
 - tag1
 - tag2
