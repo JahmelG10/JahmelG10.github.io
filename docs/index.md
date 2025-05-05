@@ -9,7 +9,7 @@ tags:
 ## STEM Weather Station Project
 **Team Number:** 303
 
-**Team Members:** Jahmel Garduno, Cade Clonts, Daniel Resnick, Tyler Dean
+**Team Members:** Jahmel Garduno, Cade Clonts, Daniel Resnick
 
 **Preperation Date:** Febuary 23, 2025
 
