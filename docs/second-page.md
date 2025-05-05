@@ -9,7 +9,7 @@ A 3.3V voltage regulator is incorporated to ensure a stable power supply for the
 ## **Schematic**
 
 
-![Block Diagram](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/Individual_Subsystem_Schematic.PNG?raw=true)
+![Block Diagram](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/Schematic_pdf2.pdf)
 
 
 ## **Download Links** 
