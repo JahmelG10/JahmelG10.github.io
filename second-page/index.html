@@ -534,6 +534,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#power-budget" class="md-nav__link">
+    Power Budget
+  </a>
+  
+    <nav class="md-nav" aria-label="Power Budget">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-major-components-absolute-maximum-current-draw" class="md-nav__link">
+    All Major Components (Absolute Maximum Current Draw)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33v-power-rail-absolute-maximum-current-draw" class="md-nav__link">
+    +3.3V Power Rail (Absolute Maximum Current Draw)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c4-regulator-or-source-choice-absolute-maximum-ratings" class="md-nav__link">
+    c4. Regulator or Source Choice (Absolute Maximum Ratings)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-power-source-1-absolute-maximum-ratings" class="md-nav__link">
+    External Power Source 1 (Absolute Maximum Ratings)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-adjustments" class="md-nav__link">
+    Key Adjustments:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -630,6 +678,54 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#power-budget" class="md-nav__link">
+    Power Budget
+  </a>
+  
+    <nav class="md-nav" aria-label="Power Budget">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-major-components-absolute-maximum-current-draw" class="md-nav__link">
+    All Major Components (Absolute Maximum Current Draw)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33v-power-rail-absolute-maximum-current-draw" class="md-nav__link">
+    +3.3V Power Rail (Absolute Maximum Current Draw)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c4-regulator-or-source-choice-absolute-maximum-ratings" class="md-nav__link">
+    c4. Regulator or Source Choice (Absolute Maximum Ratings)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-power-source-1-absolute-maximum-ratings" class="md-nav__link">
+    External Power Source 1 (Absolute Maximum Ratings)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-adjustments" class="md-nav__link">
+    Key Adjustments:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -667,6 +763,184 @@
 </ul>
 <h2 id="pcb-design"><strong>PCB Design</strong></h2>
 <p>coming soon</p>
+<h2 id="power-budget">Power Budget</h2>
+<hr />
+<h3 id="all-major-components-absolute-maximum-current-draw">All Major Components (Absolute Maximum Current Draw)</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Component Name</strong></th>
+<th><strong>Part Number</strong></th>
+<th><strong>Supply</strong></th>
+<th><strong>#</strong></th>
+<th><strong>Absolute (mA)</strong></th>
+<th><strong>Total (mA)</strong></th>
+<th><strong>Unit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PIC18F27Q10 MCU</strong></td>
+<td>PIC18F27Q10-I/SO</td>
+<td><strong>+3.3V</strong></td>
+<td>1</td>
+<td><strong>50</strong></td>
+<td><strong>50</strong></td>
+<td><strong>mA</strong></td>
+</tr>
+<tr>
+<td><strong>OLED Display</strong></td>
+<td>SSD1306</td>
+<td><strong>+3.3V</strong></td>
+<td>1</td>
+<td><strong>25</strong></td>
+<td><strong>25</strong></td>
+<td><strong>mA</strong></td>
+</tr>
+<tr>
+<td><strong>Green LED</strong></td>
+<td>Generic LED (Green)</td>
+<td><strong>+3.3V</strong></td>
+<td>1</td>
+<td><strong>20</strong></td>
+<td><strong>20</strong></td>
+<td><strong>mA</strong></td>
+</tr>
+<tr>
+<td><strong>Pull-up Resistors</strong></td>
+<td>10kΩ &amp; 4.7kΩ</td>
+<td><strong>+3.3V</strong></td>
+<td>5</td>
+<td><strong>3.62</strong></td>
+<td><strong>3.62</strong></td>
+<td><strong>mA</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="33v-power-rail-absolute-maximum-current-draw">+3.3V Power Rail (Absolute Maximum Current Draw)</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Component Name</strong></th>
+<th><strong>Part Number</strong></th>
+<th><strong>Supply</strong></th>
+<th><strong>#</strong></th>
+<th><strong>Absolute (mA)</strong></th>
+<th><strong>Total (mA)</strong></th>
+<th><strong>Unit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PIC18F27Q10 MCU</strong></td>
+<td>PIC18F27Q10-I/SO</td>
+<td><strong>+3.3V</strong></td>
+<td>1</td>
+<td><strong>50</strong></td>
+<td><strong>50</strong></td>
+<td><strong>mA</strong></td>
+</tr>
+<tr>
+<td><strong>OLED Display</strong></td>
+<td>SSD1306</td>
+<td><strong>+3.3V</strong></td>
+<td>1</td>
+<td><strong>25</strong></td>
+<td><strong>25</strong></td>
+<td><strong>mA</strong></td>
+</tr>
+<tr>
+<td><strong>Green LED</strong></td>
+<td>Generic LED (Green)</td>
+<td><strong>+3.3V</strong></td>
+<td>1</td>
+<td><strong>20</strong></td>
+<td><strong>20</strong></td>
+<td><strong>mA</strong></td>
+</tr>
+<tr>
+<td><strong>Pull-up Resistors</strong></td>
+<td>10kΩ &amp; 4.7kΩ</td>
+<td><strong>+3.3V</strong></td>
+<td>5</td>
+<td><strong>3.62</strong></td>
+<td><strong>3.62</strong></td>
+<td><strong>mA</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Subtotal:</strong> <strong>98.62mA</strong>  </li>
+<li><strong>Safety Margin (25%)</strong>: <strong>+24.66mA</strong>  </li>
+<li><strong>Total Current Required on +3.3V Rail:</strong> <strong>123.28mA</strong>  </li>
+</ul>
+<hr />
+<h3 id="c4-regulator-or-source-choice-absolute-maximum-ratings">c4. Regulator or Source Choice (Absolute Maximum Ratings)</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Regulator Name</strong></th>
+<th><strong>Supply Input</strong></th>
+<th><strong>Output Voltage</strong></th>
+<th><strong>Max Output Current</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LM2575WU (Buck Converter)</strong></td>
+<td><strong>+12V</strong></td>
+<td><strong>+3.3V</strong></td>
+<td><strong>1A (1000mA)</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Total Remaining Current Available on +3.3V Rail</strong>: <strong>876.72mA</strong>  </li>
+</ul>
+<hr />
+<h3 id="external-power-source-1-absolute-maximum-ratings">External Power Source 1 (Absolute Maximum Ratings)</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Power Source</strong></th>
+<th><strong>Part Number</strong></th>
+<th><strong>Input</strong></th>
+<th><strong>Output</strong></th>
+<th><strong>Absolute Current</strong></th>
+<th><strong>Total Current (mA)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Power Source Selection</strong></td>
+<td>Plug-in Wall Supply</td>
+<td><strong>110V AC</strong></td>
+<td><strong>+12V DC</strong></td>
+<td><strong>6000mA</strong></td>
+<td><strong>6000mA</strong></td>
+</tr>
+<tr>
+<td><strong>Power Rails Connected</strong></td>
+<td>LM2575WU Regulator</td>
+<td><strong>+12V</strong></td>
+<td><strong>+3.3V</strong></td>
+<td><strong>1000mA</strong></td>
+<td><strong>1000mA</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Total Remaining Current Available on External Power Source 1</strong>: <strong>5000mA</strong>  </li>
+</ul>
+<hr />
+<h3 id="key-adjustments">Key Adjustments:</h3>
+<ul>
+<li><strong>PIC18F27Q10 Absolute Max Current:</strong> Updated from <strong>10mA</strong> → <strong>50mA</strong>.</li>
+<li><strong>OLED Display Absolute Max Current:</strong> Updated from <strong>18mA</strong> → <strong>25mA</strong>.</li>
+<li><strong>Total +3.3V Current Requirement Updated</strong> to include <strong>safety margin</strong>.</li>
+</ul>
+<p>This power budget accounts for absolute maximum current draws to ensure a robust and reliable power supply design.</p>
 
 
 
