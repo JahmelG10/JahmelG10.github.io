@@ -25,4 +25,9 @@ My role in the team is to develop the human interface subsystem for displaying t
 
 To ensure seamless integration with the overall system, I will utilize a UART connection to send and receive data between the human interface subsystem and other components, including the sensor, actuator, and communication subsystems. My focus will be on maintaining efficient and responsive data transmission, ensuring that users receive accurate and timely environmental readings while enabling smooth interaction within the system.
 
+| Name            | Link       |
+|-----------------|------------|
+| Team Website    | [link](https://egr314-2025-s-303.github.io/EGR314-2025-S-303/) |
+| Cade Clonts     | [link](https://cclonts2.github.io/) |
+| Daniel Resnick  | [link](https://drez85.github.io/) |
 
