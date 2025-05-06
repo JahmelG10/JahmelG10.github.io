@@ -456,6 +456,19 @@
     Human Machine Interface (HMI)
   </a>
   
+    <nav class="md-nav" aria-label="Human Machine Interface (HMI)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#final-compnents-selected" class="md-nav__link">
+    Final Compnents Selected
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -628,6 +641,19 @@
     Human Machine Interface (HMI)
   </a>
   
+    <nav class="md-nav" aria-label="Human Machine Interface (HMI)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#final-compnents-selected" class="md-nav__link">
+    Final Compnents Selected
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -655,7 +681,7 @@
 
   <h1>Component Selection</h1>
 
-<h3 id="microcontroller"><strong>Microcontroller</strong></h3>
+<h2 id="microcontroller"><strong>Microcontroller</strong></h2>
 <table>
 <thead>
 <tr>
@@ -686,7 +712,7 @@
 Solution 2 - PIC18F27Q10-I/SO</p>
 <p><strong>Rationale:</strong><br />
 The PIC18F27Q10-I/SO offers an excellent balance of versatility, functionality, and efficient use of board space. With a rich array of bidirectional I/O pins that support both digital and analog functions, along with configurable peripherals such as timers, communication interfaces, and the Peripheral Pin Select (PPS) feature, this module provides the flexibility needed to handle complex tasks and interface with various sensors and actuators. Additionally, the integration of low-power features and dedicated programming interfaces makes it ideal for projects requiring robust performance in energy-sensitive environments. This combination of features in a compact package ensures that the design is both scalable and cost-effective, meeting the project's performance and connectivity requirements without unnecessary complexity.</p>
-<h3 id="voltage-regulator"><strong>Voltage Regulator</strong></h3>
+<h2 id="voltage-regulator"><strong>Voltage Regulator</strong></h2>
 <table>
 <thead>
 <tr>
@@ -717,7 +743,7 @@ The PIC18F27Q10-I/SO offers an excellent balance of versatility, functionality, 
 Solution 1 - LM2575WU </p>
 <p><strong>Rationale:</strong><br />
 The LM2575WU was chosen as our voltage regulator due to its efficiency, reliability, and ease of integration in our power management system. As a step-down (buck) switching regulator, it efficiently converts higher input voltages, such as 9V, to a stable 3.3V output, ensuring optimal power delivery while minimizing heat dissipation compared to traditional linear regulators. With a wide input voltage range (4V to 40V) and a 1A output current capacity, it provides flexibility for various power sources and load conditions. Its internal frequency compensation, fixed 52kHz switching frequency, and minimal external component requirements simplify circuit design and reduce PCB space. Additionally, the integrated thermal shutdown and current limit protection enhance system safety and durability. Given our prior experience and familiarity with this regulator, its selection ensures a seamless and efficient voltage regulation solution for our project.</p>
-<h3 id="human-machine-interface-hmi"><strong>Human Machine Interface (HMI)</strong></h3>
+<h2 id="human-machine-interface-hmi"><strong>Human Machine Interface (HMI)</strong></h2>
 <table>
 <thead>
 <tr>
@@ -748,6 +774,38 @@ The LM2575WU was chosen as our voltage regulator due to its efficiency, reliabil
 Solution 2 - Songhe 128x64 OLED Display</p>
 <p><strong>Rationale:</strong><br />
 The Songhe OLED display was chosen for this project due to its high contrast, and ultra-low power consumption (0.06W), making it ideal for clear and efficient data visualization. Its I²C communication simplifies interfacing with microcontrollers, reducing wiring complexity, while the wide 3.3V-5V power range ensures flexibility. The self-luminous OLED technology eliminates the need for a backlight, improving readability and durability in various lighting conditions. Additionally, our prior experience with this display in class allows for seamless integration, minimizing troubleshooting time.</p>
+<h3 id="final-compnents-selected"><strong>Final Compnents Selected</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Part Number</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microcontroller</td>
+<td>PIC18F47Q10</td>
+<td>Central control unit for UART, I2C, GPIO handling</td>
+</tr>
+<tr>
+<td>OLED Display</td>
+<td>SSD1306</td>
+<td>Displays temperature and fan status over I2C</td>
+</tr>
+<tr>
+<td>Switching Regulator</td>
+<td>LM2575</td>
+<td>Converts barrel jack input to 3.3V regulated supply</td>
+</tr>
+<tr>
+<td>Barrel Jack Connector</td>
+<td>PJ-102A</td>
+<td>Receives 12V power from wall outlet</td>
+</tr>
+</tbody>
+</table>
 
 
 
