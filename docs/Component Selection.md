@@ -2,7 +2,7 @@
 title: Component Selection
 ---
   
-### **Microcontroller**
+## **Microcontroller**
 
 | Solution | Pros | Cons |
 |----------|----------|----------|
@@ -18,7 +18,7 @@ The PIC18F27Q10-I/SO offers an excellent balance of versatility, functionality, 
 
 
 
-### **Voltage Regulator**
+## **Voltage Regulator**
 
 | Solution | Pros | Cons |
 |----------|----------|----------|
@@ -33,7 +33,7 @@ Solution 1 - LM2575WU
 The LM2575WU was chosen as our voltage regulator due to its efficiency, reliability, and ease of integration in our power management system. As a step-down (buck) switching regulator, it efficiently converts higher input voltages, such as 9V, to a stable 3.3V output, ensuring optimal power delivery while minimizing heat dissipation compared to traditional linear regulators. With a wide input voltage range (4V to 40V) and a 1A output current capacity, it provides flexibility for various power sources and load conditions. Its internal frequency compensation, fixed 52kHz switching frequency, and minimal external component requirements simplify circuit design and reduce PCB space. Additionally, the integrated thermal shutdown and current limit protection enhance system safety and durability. Given our prior experience and familiarity with this regulator, its selection ensures a seamless and efficient voltage regulation solution for our project.
 
 
-### **Human Machine Interface (HMI)**
+## **Human Machine Interface (HMI)**
 
 | Solution | Pros | Cons |
 |----------|----------|----------|
@@ -46,6 +46,15 @@ Solution 2 - Songhe 128x64 OLED Display
 
 **Rationale:**  
 The Songhe OLED display was chosen for this project due to its high contrast, and ultra-low power consumption (0.06W), making it ideal for clear and efficient data visualization. Its I²C communication simplifies interfacing with microcontrollers, reducing wiring complexity, while the wide 3.3V-5V power range ensures flexibility. The self-luminous OLED technology eliminates the need for a backlight, improving readability and durability in various lighting conditions. Additionally, our prior experience with this display in class allows for seamless integration, minimizing troubleshooting time.
+
+
+### **Final Compnents Selected**
+| Component               | Part Number         | Function                                          |
+|-------------------------|---------------------|---------------------------------------------------|
+| Microcontroller         | PIC18F47Q10         | Central control unit for UART, I2C, GPIO handling |
+| OLED Display            | SSD1306             | Displays temperature and fan status over I2C      |
+| Switching Regulator     | LM2575   | Converts barrel jack input to 3.3V regulated supply |
+| Barrel Jack Connector   | PJ-102A             | Receives 12V power from wall outlet                   |
 
 
 
