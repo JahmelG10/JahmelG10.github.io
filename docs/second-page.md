@@ -61,8 +61,22 @@ This schematic satisfies the project’s product and user requirements through c
 
 This combination of visibility, input responsiveness, and flexibility directly addresses user interaction needs and adheres to core design requirements for embedded system interfaces.
 
+### **Team Design and Decision-Making Process**
+
+Originally, our team's design intended for the HMI PCB to be mounted at an angle outside of an enclosure that contained the other subsystems. This orientation allowed users to easily view the OLED display while also enabling accessible interaction with the onboard pushbuttons. The angled design was chosen to improve user ergonomics and maintain a compact layout by keeping the display and controls integrated on a single board.
+
+As the project evolved, the team decided to shift to a more open presentation format. Instead of enclosing the subsystems, we made all boards visible and accessible to viewers, which supported better public engagement during demonstrations. The only components mounted externally on 3D-printed blocks were the temperature sensor and the heat lamp, which were positioned for functional interaction while maintaining visual clarity.
+
+This decision allowed for improved visibility, easier debugging, and a more interactive user experience during our final presentation.
 
 
+### **If I were to make a Version 2.0** 
+
+If I were to create a Version 2.0 of my hardware design, one of the first major changes I would make is switching from the PIC18F27Q10 microcontroller to the ESP32. This change would greatly improve the development workflow and compatibility with peripheral components like the SSD1306 OLED display. The ESP32 has extensive community support and readily available libraries, particularly for I²C OLED displays, making the software side of integration much easier. In addition, the ESP32 includes clearly documented boot and reset circuitry, which is essential for stable programming. These features would not only make the board easier to develop with, but also more accessible for future users who want to expand on the design.
+Another improvement would be to use larger, more ergonomic pushbuttons. The small tactile switches currently used are difficult to press and don’t stand out visually. Larger buttons would improve the user experience by providing better feedback and making the interface more obvious and inviting, especially in a demo setting where ease of interaction is critical.
+One of the biggest lessons I learned from the current board was the importance of efficient power distribution. In the original layout, I relied on routing individual 3.3V traces across the board without dedicating a power plane. This created a cluttered layout and forced me to place multiple vias to connect power between layers. If I had implemented a dedicated top-layer power plane, I could have distributed power more cleanly and avoided long traces, improving electrical performance and simplifying the layout. In Version 2.0, this would be a priority to support better voltage stability and reduce electromagnetic interference.
+Additionally, I would focus on reducing the overall size of the PCB. The current design is functional but bulkier than necessary, which made it harder to mount or enclose cleanly. A more compact layout, with tightly placed components and smarter routing, would result in a sleeker and more professional product.
+Finally, I would replace the adjustable voltage regulator with a fixed 3.3V regulator. Since my system only uses a 12V input and 3.3V output, the adjustable regulator—while functional—required two external resistors to set the output voltage. A fixed regulator would eliminate this need, saving space, reducing component count, and simplifying soldering. It would also be slightly cheaper, making the design more efficient in both cost and labor. These changes, grounded in what I learned from the schematic and build process, would make Version 2.0 a cleaner, more robust, and more user-friendly design.
 
 
 
