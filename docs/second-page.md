@@ -15,7 +15,7 @@ A 3.3V voltage regulator is incorporated to ensure a stable power supply for the
 
 
 ## **Download Links** 
-- [PDF](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/Schematic_pdf2.pdf)
+- [Download Schematic PDF](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/schematic_pdf2.pdf?raw=true)
 - [Altium ZIP Folder](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/Project_Workspace.zip)
 
 ## **PCB Design** 
