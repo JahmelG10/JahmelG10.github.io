@@ -479,6 +479,54 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mcc-configuration" class="md-nav__link">
+    MCC Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="MCC Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pin-configuration-explanation" class="md-nav__link">
+    Pin Configuration Explanation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-pins-pushbuttons" class="md-nav__link">
+    Input Pins (Pushbuttons)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-pins-debug-leds" class="md-nav__link">
+    Output Pins (Debug LEDs)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i2c-communication-pins-oled-display" class="md-nav__link">
+    I2C Communication Pins (OLED Display)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uart-communication-pins-serial" class="md-nav__link">
+    UART Communication Pins (Serial)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#power-budget" class="md-nav__link">
     Power Budget
   </a>
@@ -510,6 +558,20 @@
           <li class="md-nav__item">
   <a href="#external-power-source-1-absolute-maximum-ratings" class="md-nav__link">
     External Power Source 1 (Absolute Maximum Ratings)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-budget-reflection" class="md-nav__link">
+    Power Budget Reflection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    Conclusions:
   </a>
   
 </li>
@@ -712,6 +774,54 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mcc-configuration" class="md-nav__link">
+    MCC Configuration
+  </a>
+  
+    <nav class="md-nav" aria-label="MCC Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pin-configuration-explanation" class="md-nav__link">
+    Pin Configuration Explanation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-pins-pushbuttons" class="md-nav__link">
+    Input Pins (Pushbuttons)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-pins-debug-leds" class="md-nav__link">
+    Output Pins (Debug LEDs)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i2c-communication-pins-oled-display" class="md-nav__link">
+    I2C Communication Pins (OLED Display)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uart-communication-pins-serial" class="md-nav__link">
+    UART Communication Pins (Serial)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#power-budget" class="md-nav__link">
     Power Budget
   </a>
@@ -743,6 +853,20 @@
           <li class="md-nav__item">
   <a href="#external-power-source-1-absolute-maximum-ratings" class="md-nav__link">
     External Power Source 1 (Absolute Maximum Ratings)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-budget-reflection" class="md-nav__link">
+    Power Budget Reflection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusions" class="md-nav__link">
+    Conclusions:
   </a>
   
 </li>
@@ -904,6 +1028,134 @@ The Songhe OLED display was chosen for this project due to its high contrast, an
 </tr>
 </tbody>
 </table>
+<h2 id="mcc-configuration">MCC Configuration</h2>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/30759d67-355c-4c02-b5a5-d1279d6656e7" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="MCC_Block" src="https://github.com/user-attachments/assets/30759d67-355c-4c02-b5a5-d1279d6656e7" /></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/5de052dc-9e91-4788-9e32-5399eca94f02" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pins_MCC" src="https://github.com/user-attachments/assets/5de052dc-9e91-4788-9e32-5399eca94f02" /></a></p>
+<h3 id="pin-configuration-explanation">Pin Configuration Explanation</h3>
+<p>This section explains the configured input/output pins for the PIC18F27Q10 microcontroller, including pushbuttons, debug LEDs, UART, and I2C interfaces.</p>
+<hr />
+<h3 id="input-pins-pushbuttons">Input Pins (Pushbuttons)</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Pin Name</strong></th>
+<th><strong>Location</strong></th>
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA3</td>
+<td>5</td>
+<td>GPIO (input)</td>
+<td>Connected to a <strong>pushbutton</strong>. Externally pulled high to default logic <strong>1</strong>, and triggers an <strong>interrupt on negative edge</strong> (when pressed and pulled low).</td>
+</tr>
+<tr>
+<td>RC2</td>
+<td>13</td>
+<td>GPIO (input)</td>
+<td>Another <strong>pushbutton</strong> with the same pull-up behavior and <strong>negative edge interrupt</strong> configuration.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> Both buttons are <strong>active-low</strong> due to external pull-up resistors.</p>
+</blockquote>
+<hr />
+<h3 id="output-pins-debug-leds">Output Pins (Debug LEDs)</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Pin Name</strong></th>
+<th><strong>Location</strong></th>
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA6, RA7</td>
+<td>10, 9</td>
+<td>GPIO (output)</td>
+<td>Drive <strong>debug LEDs</strong> to indicate status or events.</td>
+</tr>
+<tr>
+<td>RB3, RB4, RB5</td>
+<td>24, 25, 26</td>
+<td>GPIO (output)</td>
+<td>Additional <strong>LED outputs</strong> for system feedback.</td>
+</tr>
+<tr>
+<td>RC0, RC1, RC5</td>
+<td>11, 12, 16</td>
+<td>GPIO (output)</td>
+<td>More <strong>LED channels</strong> used for debugging or visual indication.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>All output pins have <strong>slew rate enabled</strong> to reduce EMI and improve signal integrity.</p>
+</blockquote>
+<hr />
+<h3 id="i2c-communication-pins-oled-display">I2C Communication Pins (OLED Display)</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Pin Name</strong></th>
+<th><strong>Location</strong></th>
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RB1 (SCL1)</td>
+<td>22</td>
+<td>MSSP (I2C Clock)</td>
+<td>Connected to the <strong>SCL</strong> line of the SSD1306 OLED display.</td>
+</tr>
+<tr>
+<td>RB2 (SDA1)</td>
+<td>23</td>
+<td>MSSP (I2C Data)</td>
+<td>Connected to the <strong>SDA</strong> line of the OLED display.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>These are <strong>bi-directional I2C lines</strong> used for communicating with the OLED.</p>
+</blockquote>
+<hr />
+<h3 id="uart-communication-pins-serial">UART Communication Pins (Serial)</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Pin Name</strong></th>
+<th><strong>Location</strong></th>
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RC7 (RX1)</td>
+<td>18</td>
+<td>EUSART1 RX</td>
+<td>Receives UART messages (e.g., from a downstream subsystem).</td>
+</tr>
+<tr>
+<td>RC6 (TX1)</td>
+<td>17</td>
+<td>EUSART1 TX</td>
+<td>Sends UART messages (e.g., to an upstream subsystem).</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Used for full-duplex <strong>serial communication</strong> with external modules.</p>
+</blockquote>
+<hr />
 <h2 id="power-budget">Power Budget</h2>
 <hr />
 <h3 id="all-major-components-absolute-maximum-current-draw">All Major Components (Absolute Maximum Current Draw)</h3>
@@ -947,6 +1199,24 @@ The Songhe OLED display was chosen for this project due to its high contrast, an
 <ul>
 <li><strong>Total Remaining Current Available on External Power Source 1</strong>: <strong>5000mA</strong></li>
 </ul>
+<hr />
+<p>Here's a polished and concise explanation you can use for your project documentation or website:</p>
+<hr />
+<h3 id="power-budget-reflection">Power Budget Reflection</h3>
+<p>To estimate my system’s power needs, I created a power budget table listing all major components along with their absolute maximum current draw, operating voltage, and quantity used. This allowed me to calculate the total current demand on the +3.3V power rail under worst-case conditions.</p>
+<p>The key steps included:</p>
+<ul>
+<li>Summing the individual current draws of the microcontroller, OLED display, 5 LEDs, and pull-up resistors.</li>
+<li>Applying a 25% safety margin to account for potential current spikes or expansion.</li>
+<li>Comparing the total estimated current with the maximum current output of the LM2575WU switching regulator.</li>
+</ul>
+<h3 id="conclusions">Conclusions:</h3>
+<ul>
+<li>My total current draw, including the safety margin, is <strong>223.28 mA</strong>, which is well within the <strong>1A (1000 mA)</strong> capability of the LM2575WU.</li>
+<li>The external <strong>12V wall supply</strong> provides more than enough input power, leaving over <strong>5000 mA</strong> of unused capacity.</li>
+<li>The design is robust, reliable, and has enough power headroom to support future components or design modifications.</li>
+</ul>
+<p>This process ensured that the system is electrically stable and that the chosen regulator and power source are not operating near their limits, which helps improve reliability and thermal performance.</p>
 <hr />
 
 
