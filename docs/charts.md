@@ -3,6 +3,7 @@ title: Block Diagram
 ---
 ## HMI Interface Block Diagram 
 
-![3144BlockDiagram](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/3144BlockDiagram.drawio.png?raw=true)---
 
+
+![Block_Diagram](https://github.com/user-attachments/assets/31ebf395-2698-4df6-bad9-ea086c22cac3)
 
