@@ -1,5 +1,5 @@
 ---
-title: PIC18F27Q10 Table/DataSheets
+title: Resources
 ---
 ## **PIC18F27Q10 Information Table**
 | PIC18F27Q10 Info| Answer | Comments |
