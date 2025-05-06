@@ -1,11 +1,16 @@
 ---
 title: Block Diagram
 ---
-## HMI Interface Block Diagram 
+## HMI Interface Block Diagram
+---
+[Download HMI Schematic (PDF)](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/314HMI.drawio.pdf?raw=true)
+
+![314HMI](https://github.com/user-attachments/assets/d0099a2c-6e9a-4c51-9dbf-18a4bac1677b)
 
 
 
-[![Block Diagram](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/blockdiagram.png?raw=true)]
+
+
 
 ### **Decision-Making Process and Block Diagram Justification** 
 I developed my block diagram by identifying and organizing all critical components and connections required for the functionality of my board. My goal was to clearly represent the system architecture, data flow, and how each subsystem interfaces with the microcontroller.
