@@ -25,6 +25,8 @@ coming soon
 
 ## **Bill of Materials**
 ![Bill of materials](https://github.com/user-attachments/assets/086d2c85-5e1f-4a61-8779-47f1a1fbcb01)
+[Download Bill of Materials (Excel)](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/website%20bill%20of%20materials.xlsx?raw=true)
+
 
 
 
