@@ -5,5 +5,7 @@ title: Block Diagram
 
 
 
-![Block_Diagram](https://github.com/user-attachments/assets/31ebf395-2698-4df6-bad9-ea086c22cac3)
+[![Block Diagram](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/blockdiagram.png?raw=true)]
+
+
 
