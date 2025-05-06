@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#microcontroller" class="md-skip">
+        <a href="#title-component-selection" class="md-skip">
           Skip to content
         </a>
       
@@ -438,6 +438,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#title-component-selection" class="md-nav__link">
+    title: Component Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#microcontroller" class="md-nav__link">
     Microcontroller
   </a>
@@ -462,6 +469,47 @@
           <li class="md-nav__item">
   <a href="#final-compnents-selected" class="md-nav__link">
     Final Compnents Selected
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-budget" class="md-nav__link">
+    Power Budget
+  </a>
+  
+    <nav class="md-nav" aria-label="Power Budget">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-major-components-absolute-maximum-current-draw" class="md-nav__link">
+    All Major Components (Absolute Maximum Current Draw)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33v-power-rail-absolute-maximum-current-draw" class="md-nav__link">
+    +3.3V Power Rail (Absolute Maximum Current Draw)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c4-regulator-or-source-choice-absolute-maximum-ratings" class="md-nav__link">
+    c4. Regulator or Source Choice (Absolute Maximum Ratings)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-power-source-1-absolute-maximum-ratings" class="md-nav__link">
+    External Power Source 1 (Absolute Maximum Ratings)
   </a>
   
 </li>
@@ -623,6 +671,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#title-component-selection" class="md-nav__link">
+    title: Component Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#microcontroller" class="md-nav__link">
     Microcontroller
   </a>
@@ -647,6 +702,47 @@
           <li class="md-nav__item">
   <a href="#final-compnents-selected" class="md-nav__link">
     Final Compnents Selected
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-budget" class="md-nav__link">
+    Power Budget
+  </a>
+  
+    <nav class="md-nav" aria-label="Power Budget">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-major-components-absolute-maximum-current-draw" class="md-nav__link">
+    All Major Components (Absolute Maximum Current Draw)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33v-power-rail-absolute-maximum-current-draw" class="md-nav__link">
+    +3.3V Power Rail (Absolute Maximum Current Draw)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c4-regulator-or-source-choice-absolute-maximum-ratings" class="md-nav__link">
+    c4. Regulator or Source Choice (Absolute Maximum Ratings)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-power-source-1-absolute-maximum-ratings" class="md-nav__link">
+    External Power Source 1 (Absolute Maximum Ratings)
   </a>
   
 </li>
@@ -681,6 +777,8 @@
 
   <h1>Component Selection</h1>
 
+<hr />
+<h2 id="title-component-selection">title: Component Selection</h2>
 <h2 id="microcontroller"><strong>Microcontroller</strong></h2>
 <table>
 <thead>
@@ -806,6 +904,50 @@ The Songhe OLED display was chosen for this project due to its high contrast, an
 </tr>
 </tbody>
 </table>
+<h2 id="power-budget">Power Budget</h2>
+<hr />
+<h3 id="all-major-components-absolute-maximum-current-draw">All Major Components (Absolute Maximum Current Draw)</h3>
+<div class="highlight"><pre><span></span><code>| <span class="gs">**Component Name**</span>        | <span class="gs">**Part Number**</span>       | <span class="gs">**Supply**</span> | <span class="gs">**#**</span> | <span class="gs">**Absolute (mA)**</span> | <span class="gs">**Total (mA)**</span> | <span class="gs">**Unit**</span> |
+|---------------------------|------------------------|------------|------|-------------------|----------------|----------|
+| <span class="gs">**PIC18F27Q10 MCU**</span>       | PIC18F27Q10-I/SO       | <span class="gs">**+3.3V**</span>  | 1    | <span class="gs">**50**</span>            | <span class="gs">**50**</span>         | <span class="gs">**mA**</span>   |
+| <span class="gs">**OLED Display**</span>          | SSD1306                | <span class="gs">**+3.3V**</span>  | 1    | <span class="gs">**25**</span>            | <span class="gs">**25**</span>         | <span class="gs">**mA**</span>   |
+| <span class="gs">**Green LEDs**</span>            | Generic LED (Green)    | <span class="gs">**+3.3V**</span>  | 5    | <span class="gs">**20**</span>            | <span class="gs">**100**</span>        | <span class="gs">**mA**</span>   |
+| <span class="gs">**Pull-up Resistors**</span>     | 10kΩ &amp; 4.7kΩ           | <span class="gs">**+3.3V**</span>  | 5    | <span class="gs">**3.62**</span>          | <span class="gs">**3.62**</span>       | <span class="gs">**mA**</span>   |
+</code></pre></div>
+<hr />
+<h3 id="33v-power-rail-absolute-maximum-current-draw">+3.3V Power Rail (Absolute Maximum Current Draw)</h3>
+<div class="highlight"><pre><span></span><code>| <span class="gs">**Component Name**</span>        | <span class="gs">**Part Number**</span>       | <span class="gs">**Supply**</span> | <span class="gs">**#**</span> | <span class="gs">**Absolute (mA)**</span> | <span class="gs">**Total (mA)**</span> | <span class="gs">**Unit**</span> |
+|---------------------------|------------------------|------------|------|-------------------|----------------|----------|
+| <span class="gs">**PIC18F27Q10 MCU**</span>       | PIC18F27Q10-I/SO       | <span class="gs">**+3.3V**</span>  | 1    | <span class="gs">**50**</span>            | <span class="gs">**50**</span>         | <span class="gs">**mA**</span>   |
+| <span class="gs">**OLED Display**</span>          | SSD1306                | <span class="gs">**+3.3V**</span>  | 1    | <span class="gs">**25**</span>            | <span class="gs">**25**</span>         | <span class="gs">**mA**</span>   |
+| <span class="gs">**Green LEDs**</span>            | Generic LED (Green)    | <span class="gs">**+3.3V**</span>  | 5    | <span class="gs">**20**</span>            | <span class="gs">**100**</span>        | <span class="gs">**mA**</span>   |
+| <span class="gs">**Pull-up Resistors**</span>     | 10kΩ &amp; 4.7kΩ           | <span class="gs">**+3.3V**</span>  | 5    | <span class="gs">**3.62**</span>          | <span class="gs">**3.62**</span>       | <span class="gs">**mA**</span>   |
+</code></pre></div>
+<ul>
+<li><strong>Subtotal:</strong> <strong>178.62mA</strong></li>
+<li><strong>Safety Margin (25%)</strong>: <strong>+44.66mA</strong></li>
+<li><strong>Total Current Required on +3.3V Rail:</strong> <strong>223.28mA</strong></li>
+</ul>
+<hr />
+<h3 id="c4-regulator-or-source-choice-absolute-maximum-ratings">c4. Regulator or Source Choice (Absolute Maximum Ratings)</h3>
+<div class="highlight"><pre><span></span><code>| <span class="gs">**Regulator Name**</span>        | <span class="gs">**Supply Input**</span> | <span class="gs">**Output Voltage**</span> | <span class="gs">**Max Output Current**</span> |
+|---------------------------|------------------|---------------------|--------------------------|
+| <span class="gs">**LM2575WU (Buck Converter)**</span> | <span class="gs">**+12V**</span>       | <span class="gs">**+3.3V**</span>           | <span class="gs">**1A (1000mA)**</span>         |
+</code></pre></div>
+<ul>
+<li><strong>Total Remaining Current Available on +3.3V Rail</strong>: <strong>776.72mA</strong></li>
+</ul>
+<hr />
+<h3 id="external-power-source-1-absolute-maximum-ratings">External Power Source 1 (Absolute Maximum Ratings)</h3>
+<div class="highlight"><pre><span></span><code>| <span class="gs">**Power Source**</span>            | <span class="gs">**Part Number**</span>       | <span class="gs">**Input**</span>     | <span class="gs">**Output**</span>     | <span class="gs">**Absolute Current**</span> | <span class="gs">**Total Current (mA)**</span> |
+|-----------------------------|------------------------|---------------|----------------|-----------------------|------------------------|
+| <span class="gs">**Power Source Selection**</span>  | Plug-in Wall Supply    | <span class="gs">**110V AC**</span>   | <span class="gs">**+12V DC**</span>    | <span class="gs">**6000mA**</span>            | <span class="gs">**6000mA**</span>             |
+| <span class="gs">**Power Rails Connected**</span>   | LM2575WU Regulator     | <span class="gs">**+12V**</span>      | <span class="gs">**+3.3V**</span>      | <span class="gs">**1000mA**</span>            | <span class="gs">**1000mA**</span>             |
+</code></pre></div>
+<ul>
+<li><strong>Total Remaining Current Available on External Power Source 1</strong>: <strong>5000mA</strong></li>
+</ul>
+<hr />
 
 
 
