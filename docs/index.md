@@ -10,7 +10,7 @@ tags:
  |
 
 
-## STEM Weather Station Project
+## STEM Cooling System Project
 **Team Number:** 303
 
 **Team Members:** Jahmel Garduno, Cade Clonts, Daniel Resnick
