@@ -8,7 +8,8 @@ To support debugging and monitoring, the schematic includes a single debugging L
 A 3.3V voltage regulator is incorporated to ensure a stable power supply for the HMI subsystem. This schematic is designed to meet user needs and project requirements by enabling real-time data display, supporting UART communication, and facilitating efficient system debugging through dedicated interfaces.
 ## **Schematic**
 
-![schemtic](https://github.com/user-attachments/assets/17f1910e-2555-4c74-86df-f79beb7038d6)
+
+![schemtic](https://github.com/user-attachments/assets/e2495e5e-e3b6-4b29-95d5-4f80e1134677)
 
 
 
