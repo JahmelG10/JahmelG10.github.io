@@ -36,16 +36,18 @@ A 3.3V voltage regulator is incorporated to ensure a stable power supply for the
 
 ![pcbnakedback](https://github.com/user-attachments/assets/f8df26bd-ba47-4b5c-ad32-f2e941c8630f)
 
+## **Bill of Materials**
+
+![Bill of materials](https://github.com/user-attachments/assets/086d2c85-5e1f-4a61-8779-47f1a1fbcb01)
+[Download Bill of Materials (Excel)](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/website%20bill%20of%20materials.xlsx?raw=true)
+
 ## **Final Integrated and Soldered Team PCB**
 ### **Top Layer**
 ![Board_pcbfront](https://github.com/user-attachments/assets/ab2c3441-4981-4e04-a65f-82ff80a9460c)
 ### **Bottom Layer**
 ![Board_pcbback](https://github.com/user-attachments/assets/8ffdd10d-bf2e-4d37-a18c-10bf7b0a03c1)
 
-## **Bill of Materials**
 
-![Bill of materials](https://github.com/user-attachments/assets/086d2c85-5e1f-4a61-8779-47f1a1fbcb01)
-[Download Bill of Materials (Excel)](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/website%20bill%20of%20materials.xlsx?raw=true)
 
 ### Functional Discussion: How the Schematic Meets Product Requirements
 
