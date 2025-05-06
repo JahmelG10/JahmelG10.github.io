@@ -57,6 +57,64 @@ The Songhe OLED display was chosen for this project due to its high contrast, an
 | Switching Regulator     | LM2575   | Converts barrel jack input to 3.3V regulated supply |
 | Barrel Jack Connector   | PJ-102A             | Receives 12V power from wall outlet                   |
 
+## MCC Configuration 
+![MCC_Block](https://github.com/user-attachments/assets/30759d67-355c-4c02-b5a5-d1279d6656e7)
+
+
+![Pins_MCC](https://github.com/user-attachments/assets/5de052dc-9e91-4788-9e32-5399eca94f02)
+### Pin Configuration Explanation
+
+This section explains the configured input/output pins for the PIC18F27Q10 microcontroller, including pushbuttons, debug LEDs, UART, and I2C interfaces.
+
+---
+
+###  Input Pins (Pushbuttons)
+
+| **Pin Name** | **Location** | **Function** | **Description** |
+|--------------|--------------|--------------|-----------------|
+| RA3          | 5            | GPIO (input) | Connected to a **pushbutton**. Externally pulled high to default logic **1**, and triggers an **interrupt on negative edge** (when pressed and pulled low). |
+| RC2          | 13           | GPIO (input) | Another **pushbutton** with the same pull-up behavior and **negative edge interrupt** configuration. |
+
+> **Note:** Both buttons are **active-low** due to external pull-up resistors.
+
+---
+
+###  Output Pins (Debug LEDs)
+
+| **Pin Name** | **Location** | **Function** | **Description** |
+|--------------|--------------|--------------|-----------------|
+| RA6, RA7     | 10, 9        | GPIO (output) | Drive **debug LEDs** to indicate status or events. |
+| RB3, RB4, RB5| 24, 25, 26   | GPIO (output) | Additional **LED outputs** for system feedback. |
+| RC0, RC1, RC5| 11, 12, 16   | GPIO (output) | More **LED channels** used for debugging or visual indication. |
+
+> All output pins have **slew rate enabled** to reduce EMI and improve signal integrity.
+
+---
+
+###  I2C Communication Pins (OLED Display)
+
+| **Pin Name** | **Location** | **Function** | **Description** |
+|--------------|--------------|--------------|-----------------|
+| RB1 (SCL1)   | 22           | MSSP (I2C Clock) | Connected to the **SCL** line of the SSD1306 OLED display. |
+| RB2 (SDA1)   | 23           | MSSP (I2C Data)  | Connected to the **SDA** line of the OLED display. |
+
+> These are **bi-directional I2C lines** used for communicating with the OLED.
+
+---
+
+###  UART Communication Pins (Serial)
+
+| **Pin Name** | **Location** | **Function** | **Description** |
+|--------------|--------------|--------------|-----------------|
+| RC7 (RX1)    | 18           | EUSART1 RX   | Receives UART messages (e.g., from a downstream subsystem). |
+| RC6 (TX1)    | 17           | EUSART1 TX   | Sends UART messages (e.g., to an upstream subsystem). |
+
+> Used for full-duplex **serial communication** with external modules.
+
+---
+
+
+
 
 
 
@@ -118,6 +176,31 @@ The Songhe OLED display was chosen for this project due to its high contrast, an
 * **Total Remaining Current Available on External Power Source 1**: **5000mA**
 
 ---
+Here's a polished and concise explanation you can use for your project documentation or website:
+
+---
+
+###  Power Budget Reflection
+
+To estimate my system’s power needs, I created a power budget table listing all major components along with their absolute maximum current draw, operating voltage, and quantity used. This allowed me to calculate the total current demand on the +3.3V power rail under worst-case conditions.
+
+The key steps included:
+
+* Summing the individual current draws of the microcontroller, OLED display, 5 LEDs, and pull-up resistors.
+* Applying a 25% safety margin to account for potential current spikes or expansion.
+* Comparing the total estimated current with the maximum current output of the LM2575WU switching regulator.
+
+###  Conclusions:
+
+* My total current draw, including the safety margin, is **223.28 mA**, which is well within the **1A (1000 mA)** capability of the LM2575WU.
+* The external **12V wall supply** provides more than enough input power, leaving over **5000 mA** of unused capacity.
+* The design is robust, reliable, and has enough power headroom to support future components or design modifications.
+
+This process ensured that the system is electrically stable and that the chosen regulator and power source are not operating near their limits, which helps improve reliability and thermal performance.
+
+---
+
+
 
 
 
