@@ -39,7 +39,7 @@ A 3.3V voltage regulator is incorporated to ensure a stable power supply for the
 ## **Final Integrated and Soldered Team PCB**
 ### **Top Layer**
 ![Board_pcbfront](https://github.com/user-attachments/assets/ab2c3441-4981-4e04-a65f-82ff80a9460c)
-### **Bottom Layer
+### **Bottom Layer**
 ![Board_pcbback](https://github.com/user-attachments/assets/8ffdd10d-bf2e-4d37-a18c-10bf7b0a03c1)
 
 ## **Bill of Materials**
