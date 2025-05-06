@@ -7,6 +7,7 @@ To support debugging and monitoring, the schematic includes a single debugging L
 
 A 3.3V voltage regulator is incorporated to ensure a stable power supply for the HMI subsystem. This schematic is designed to meet user needs and project requirements by enabling real-time data display, supporting UART communication, and facilitating efficient system debugging through dedicated interfaces.
 ## **Schematic**
+[Download Schematic (PDF)](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/Schematic_pdf2.pdf?raw=true)
 ![schemtic](https://github.com/user-attachments/assets/90dacd5c-1415-4509-939a-937d88ec0c50)
 
 
@@ -17,12 +18,14 @@ A 3.3V voltage regulator is incorporated to ensure a stable power supply for the
 
 
 ## **Download Links** 
-- [Download Schematic (PDF)](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/Schematic_pdf2.pdf?raw=true)
+
 - [Download Altium Project Workspace (ZIP)](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/Project_Workspace.zip?raw=true)
 - [Download Gerber Files (ZIP)](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/Gerber.zip?raw=true)
 
 
 ## **PCB Design** 
+[📄 Download PCB Layout (PDF)](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/Binder1.pdf?raw=true)
+
 ### **Ecad Top Layer**
 ![PCB_front_cad](https://github.com/user-attachments/assets/5dfe5873-92c8-4408-9b2f-29b3bf347c17)
 
