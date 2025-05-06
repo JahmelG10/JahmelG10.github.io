@@ -21,7 +21,20 @@ A 3.3V voltage regulator is incorporated to ensure a stable power supply for the
 - [Altium ZIP Folder](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/Project_Workspace.zip)
 
 ## **PCB Design** 
-coming soon
+### **Ecad Top Layer**
+![PCB_front_cad](https://github.com/user-attachments/assets/5dfe5873-92c8-4408-9b2f-29b3bf347c17)
+
+### **Ecad Bottom Layer**
+![PCB_back_cad](https://github.com/user-attachments/assets/b8a9b6af-1d1e-4c64-969b-119708c11da2)
+
+### **Manufacture Top Layer**
+![pcbnaked](https://github.com/user-attachments/assets/8e47b74b-3fcb-4d15-a99c-5b64cda9fdae)
+
+### **Manufacture Bottom Layer**
+
+![pcbnakedback](https://github.com/user-attachments/assets/f8df26bd-ba47-4b5c-ad32-f2e941c8630f)
+
+
 
 ## **Bill of Materials**
 ![Bill of materials](https://github.com/user-attachments/assets/086d2c85-5e1f-4a61-8779-47f1a1fbcb01)
