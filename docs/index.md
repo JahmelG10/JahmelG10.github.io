@@ -6,7 +6,8 @@ tags:
 ---
 | Front Side | Back Side |
 |------------|-----------|
-| ![Front PCB](/mnt/data/pcbnaked.jpg) | ![Back PCB](/mnt/data/pcbnakedback.jpg) |
+| ![pcbnaked](https://github.com/user-attachments/assets/07484257-1352-46ed-8163-4d301e643b5d) | ![pcbnakedback](https://github.com/user-attachments/assets/53330eba-9c7b-4487-be35-547053c2151e)
+ |
 
 
 ## STEM Weather Station Project
