@@ -1,3 +1,4 @@
+
 ---
 title: Component Selection
 ---
@@ -55,6 +56,68 @@ The Songhe OLED display was chosen for this project due to its high contrast, an
 | OLED Display            | SSD1306             | Displays temperature and fan status over I2C      |
 | Switching Regulator     | LM2575   | Converts barrel jack input to 3.3V regulated supply |
 | Barrel Jack Connector   | PJ-102A             | Receives 12V power from wall outlet                   |
+
+
+
+
+## Power Budget
+
+---
+
+### All Major Components (Absolute Maximum Current Draw)
+
+```markdown
+| **Component Name**        | **Part Number**       | **Supply** | **#** | **Absolute (mA)** | **Total (mA)** | **Unit** |
+|---------------------------|------------------------|------------|------|-------------------|----------------|----------|
+| **PIC18F27Q10 MCU**       | PIC18F27Q10-I/SO       | **+3.3V**  | 1    | **50**            | **50**         | **mA**   |
+| **OLED Display**          | SSD1306                | **+3.3V**  | 1    | **25**            | **25**         | **mA**   |
+| **Green LEDs**            | Generic LED (Green)    | **+3.3V**  | 5    | **20**            | **100**        | **mA**   |
+| **Pull-up Resistors**     | 10kΩ & 4.7kΩ           | **+3.3V**  | 5    | **3.62**          | **3.62**       | **mA**   |
+```
+
+---
+
+### +3.3V Power Rail (Absolute Maximum Current Draw)
+
+```markdown
+| **Component Name**        | **Part Number**       | **Supply** | **#** | **Absolute (mA)** | **Total (mA)** | **Unit** |
+|---------------------------|------------------------|------------|------|-------------------|----------------|----------|
+| **PIC18F27Q10 MCU**       | PIC18F27Q10-I/SO       | **+3.3V**  | 1    | **50**            | **50**         | **mA**   |
+| **OLED Display**          | SSD1306                | **+3.3V**  | 1    | **25**            | **25**         | **mA**   |
+| **Green LEDs**            | Generic LED (Green)    | **+3.3V**  | 5    | **20**            | **100**        | **mA**   |
+| **Pull-up Resistors**     | 10kΩ & 4.7kΩ           | **+3.3V**  | 5    | **3.62**          | **3.62**       | **mA**   |
+```
+
+* **Subtotal:** **178.62mA**
+* **Safety Margin (25%)**: **+44.66mA**
+* **Total Current Required on +3.3V Rail:** **223.28mA**
+
+---
+
+### c4. Regulator or Source Choice (Absolute Maximum Ratings)
+
+```markdown
+| **Regulator Name**        | **Supply Input** | **Output Voltage** | **Max Output Current** |
+|---------------------------|------------------|---------------------|--------------------------|
+| **LM2575WU (Buck Converter)** | **+12V**       | **+3.3V**           | **1A (1000mA)**         |
+```
+
+* **Total Remaining Current Available on +3.3V Rail**: **776.72mA**
+
+---
+
+### External Power Source 1 (Absolute Maximum Ratings)
+
+```markdown
+| **Power Source**            | **Part Number**       | **Input**     | **Output**     | **Absolute Current** | **Total Current (mA)** |
+|-----------------------------|------------------------|---------------|----------------|-----------------------|------------------------|
+| **Power Source Selection**  | Plug-in Wall Supply    | **110V AC**   | **+12V DC**    | **6000mA**            | **6000mA**             |
+| **Power Rails Connected**   | LM2575WU Regulator     | **+12V**      | **+3.3V**      | **1000mA**            | **1000mA**             |
+```
+
+* **Total Remaining Current Available on External Power Source 1**: **5000mA**
+
+---
 
 
 
