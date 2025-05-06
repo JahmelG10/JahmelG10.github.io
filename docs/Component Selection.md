@@ -1,7 +1,5 @@
 
----
-title: Component Selection
----
+
   
 ## **Microcontroller**
 
