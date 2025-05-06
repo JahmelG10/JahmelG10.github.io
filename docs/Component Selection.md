@@ -96,18 +96,18 @@ The Songhe OLED display was chosen for this project due to its high contrast, an
 
 
 
-## MCC Configuration 
+## **MCC Configuration** 
 ![MCC_Block](https://github.com/user-attachments/assets/30759d67-355c-4c02-b5a5-d1279d6656e7)
 
 
 ![Pins_MCC](https://github.com/user-attachments/assets/5de052dc-9e91-4788-9e32-5399eca94f02)
-### Pin Configuration Explanation
+### **Pin Configuration Explanation**
 
 This section explains the configured input/output pins for the PIC18F27Q10 microcontroller, including pushbuttons, debug LEDs, UART, and I2C interfaces.
 
 ---
 
-###  Input Pins (Pushbuttons)
+###  **Input Pins (Pushbuttons)**
 
 | **Pin Name** | **Location** | **Function** | **Description** |
 |--------------|--------------|--------------|-----------------|
@@ -118,7 +118,7 @@ This section explains the configured input/output pins for the PIC18F27Q10 micro
 
 ---
 
-###  Output Pins (Debug LEDs)
+###  **Output Pins (Debug LEDs)**
 
 | **Pin Name** | **Location** | **Function** | **Description** |
 |--------------|--------------|--------------|-----------------|
@@ -130,7 +130,7 @@ This section explains the configured input/output pins for the PIC18F27Q10 micro
 
 ---
 
-###  I2C Communication Pins (OLED Display)
+###  **I2C Communication Pins (OLED Display)**
 
 | **Pin Name** | **Location** | **Function** | **Description** |
 |--------------|--------------|--------------|-----------------|
@@ -141,7 +141,7 @@ This section explains the configured input/output pins for the PIC18F27Q10 micro
 
 ---
 
-###  UART Communication Pins (Serial)
+###  **UART Communication Pins (Serial)**
 
 | **Pin Name** | **Location** | **Function** | **Description** |
 |--------------|--------------|--------------|-----------------|
@@ -157,11 +157,11 @@ This section explains the configured input/output pins for the PIC18F27Q10 micro
 
 
 
-## Power Budget
+## **Power Budget**
 
 ---
 
-### All Major Components (Absolute Maximum Current Draw)
+### **All Major Components (Absolute Maximum Current Draw)**
 
 ```markdown
 | **Component Name**        | **Part Number**       | **Supply** | **#** | **Absolute (mA)** | **Total (mA)** | **Unit** |
@@ -174,7 +174,7 @@ This section explains the configured input/output pins for the PIC18F27Q10 micro
 
 ---
 
-### +3.3V Power Rail (Absolute Maximum Current Draw)
+### **+3.3V Power Rail (Absolute Maximum Current Draw)**
 
 ```markdown
 | **Component Name**        | **Part Number**       | **Supply** | **#** | **Absolute (mA)** | **Total (mA)** | **Unit** |
@@ -191,7 +191,7 @@ This section explains the configured input/output pins for the PIC18F27Q10 micro
 
 ---
 
-### c4. Regulator or Source Choice (Absolute Maximum Ratings)
+### **c4. Regulator or Source Choice (Absolute Maximum Ratings)**
 
 ```markdown
 | **Regulator Name**        | **Supply Input** | **Output Voltage** | **Max Output Current** |
@@ -203,7 +203,7 @@ This section explains the configured input/output pins for the PIC18F27Q10 micro
 
 ---
 
-### External Power Source 1 (Absolute Maximum Ratings)
+### **External Power Source 1 (Absolute Maximum Ratings)**
 
 ```markdown
 | **Power Source**            | **Part Number**       | **Input**     | **Output**     | **Absolute Current** | **Total Current (mA)** |
@@ -219,7 +219,7 @@ Here's a polished and concise explanation you can use for your project documenta
 
 ---
 
-###  Power Budget Reflection
+###  **Power Budget Reflection**
 
 To estimate my system’s power needs, I created a power budget table listing all major components along with their absolute maximum current draw, operating voltage, and quantity used. This allowed me to calculate the total current demand on the +3.3V power rail under worst-case conditions.
 
@@ -229,7 +229,7 @@ The key steps included:
 * Applying a 25% safety margin to account for potential current spikes or expansion.
 * Comparing the total estimated current with the maximum current output of the LM2575WU switching regulator.
 
-###  Conclusions:
+###  **Conclusions**
 
 * My total current draw, including the safety margin, is **223.28 mA**, which is well within the **1A (1000 mA)** capability of the LM2575WU.
 * The external **12V wall supply** provides more than enough input power, leaving over **5000 mA** of unused capacity.
