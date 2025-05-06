@@ -3,7 +3,8 @@ title: Block Diagram
 ---
 ## HMI Interface Block Diagram
 ---
-[Download HMI Schematic (PDF)](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/314HMI.drawio.pdf?raw=true)
+[Download HMI Block Diagram (PDF)](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/314HMI.drawio.pdf?raw=true)
+
 
 ![314HMI](https://github.com/user-attachments/assets/d0099a2c-6e9a-4c51-9dbf-18a4bac1677b)
 
