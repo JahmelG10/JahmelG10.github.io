@@ -35,3 +35,6 @@ To ensure seamless integration with the overall system, I will utilize a UART co
 | Cade Clonts     | [link](https://cclonts2.github.io/) |
 | Daniel Resnick  | [link](https://drez85.github.io/) |
 
+### **Jahmel Garduno Resume**
+
+[Download Jahmel Garduno Resume (PDF)](https://github.com/JahmelG10/JahmelG10.github.io/blob/main/Jahmel%20Garduno%20EGR%20Resume.pdf)
